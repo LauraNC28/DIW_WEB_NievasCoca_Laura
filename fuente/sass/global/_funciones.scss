@@ -1,0 +1,12 @@
+// Función para calcular el número de columnas en función del tamaño de pantalla
+@function grid-columns($screen-width) {
+    $columns: 3; // Número de columnas por defecto
+
+    @if $screen-width < 768px {
+        $columns: 1; // Una columna para pantallas pequeñas
+    } @else if $screen-width < 1024px {
+        $columns: 2; // Dos columnas para pantallas medianas
+    }
+
+    @return $columns;
+}

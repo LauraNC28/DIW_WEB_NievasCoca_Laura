@@ -1,0 +1,108 @@
+@use "../global/variables.scss" as v; // Importa las variables y les asigna el alias "v"
+@use "../global/funciones.scss" as f; // Importa las funciones y les asigna el alias "f"
+
+// Estilos generales para el cuerpo de la página
+body {
+    background-color: v.$color-fondo; // Color de fondo del cuerpo
+    color: v.$color-texto; // Color de texto principal
+    font-family: v.$fuente-principal; // Fuente de texto principal
+    margin: 0; // Elimina los márgenes predeterminados
+    padding: 0; // Elimina el relleno predeterminado
+}
+
+// Estilos para los títulos de sección (Últimas recetas, Recetas populares)
+.ultimas-recetas,
+.recetas-populares {
+    text-align: center; // Centra el texto del título
+    margin: 20px 0; // Márgenes superior e inferior
+    background-color: v.$color-seccion-titulo; // Color de fondo del título
+    border: 2px solid v.$color-borde-seccion; // Borde del título
+    font-family: v.$fuente-secundaria; // Fuente de texto secundaria
+    font-weight: bold; // Texto en negrita
+    padding: 10px; // Relleno interno
+    border-radius: 8px; // Bordes redondeados
+}
+
+// Estilos para la cuadrícula de recetas
+.recetas-grid {
+    display: flex; // Usa flexbox para el diseño de la cuadrícula
+    justify-content: center; // Centra las imágenes horizontalmente
+    gap: 20px; // Espacio entre las recetas
+    flex-wrap: wrap; // Permite que las recetas se ajusten a varias líneas
+    max-width: 100vw; // Ancho máximo del 100% del viewport
+    overflow: hidden; // Oculta el contenido que se desborda
+
+    // Utiliza la función para definir el número de columnas
+    $columns: f.grid-columns(1024px); // Ejemplo: Para un ancho de pantalla de 1024px
+
+    @if $columns == 1 {
+        // Estilos para una columna
+        .receta {
+            max-width: 100%;
+        }
+    } @else if $columns == 2 {
+        // Estilos para dos columnas
+        .receta {
+            max-width: 45%; // Ajusta el ancho para dos columnas
+        }
+    } @else {
+        // Estilos para tres columnas
+        .receta {
+            max-width: 30%;
+        }
+    }
+}
+
+// Estilos para las tarjetas de recetas
+.receta {
+    background-color: v.$color-fondo-receta; // Color de fondo de la tarjeta
+    font-family: v.$fuente-secundaria; // Fuente de texto secundaria
+    font-weight: 600; // Texto en negrita
+    text-align: center; // Centra el texto de la receta
+    padding: 15px; // Relleno interno
+    border-radius: 10px; // Bordes redondeados
+    flex: 1; // Ocupa todo el espacio disponible
+    max-width: 30%; // Ancho máximo del 30% del contenedor
+}
+
+// Estilos para las imágenes dentro de las tarjetas de recetas
+.receta picture {
+    display: block; // Ocupa todo el ancho disponible
+    width: 100%; // Ancho del 100% de la tarjeta
+    height: auto; // Altura automática para mantener la proporción
+}
+
+.receta img {
+    width: 100%; // Ancho del 100% del contenedor
+    height: auto; // Altura automática para mantener la proporción
+    object-fit: contain; // Ajusta la imagen al contenedor sin distorsionar
+    border-radius: 8px; // Bordes redondeados
+    max-width: 400px; // Ancho máximo de la imagen
+}
+
+.receta p {
+    margin-top: 10px; // Espacio entre la imagen y el texto
+}
+
+// Estilos para los botones de receta
+.boton-receta {
+    background-color: v.$color-boton; // Color de fondo del botón
+    border: 2px solid v.$color-borde-boton; // Borde del botón
+    font-family: v.$fuente-decorativa; // Fuente de texto decorativa
+    font-weight: 400; // Texto normal
+    padding: 8px 15px; // Relleno interno
+    border-radius: 8px; // Bordes redondeados
+    cursor: pointer; // Cursor de puntero al pasar por encima
+    color: v.$color-texto; // Color de texto
+
+    &:hover { // Estilos al pasar el ratón por encima
+        background-color: v.$color-borde-boton; // Cambia el color de fondo
+    }
+}
+
+// Media query para tablets y móviles
+@media (max-width: 1024px) { // Ajusta el breakpoint si es necesario
+    .recetas-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Una o dos columnas según el tamaño 
+    }
+}

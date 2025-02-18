@@ -1,0 +1,64 @@
+@use "../global/variables.scss" as v; // Importa las variables y les asigna el alias "v"
+@use "../global/mixins.scss" as mixins; // Importa mixins y se asigna a el alias "mixins"
+
+body { // Estilos para el cuerpo de la página
+    background-color: v.$color-fondo; // Color de fondo de la página (variable)
+    color: v.$color-texto; // Color del texto (variable)
+    font-family: v.$fuente-principal; // Fuente de texto principal (variable)
+    margin: 0; // Elimina los márgenes predeterminados del cuerpo
+    padding: 0; // Elimina el relleno predeterminado del cuerpo
+}
+
+.landing { // Estilos para la sección principal "landing"
+    display: flex; // Usa flexbox para el diseño
+    flex-direction: column; // Los elementos se organizan en columna
+    align-items: center; // Centra los elementos horizontalmente
+    gap: 2rem; // Espacio entre las secciones (variable)
+    padding: 2rem; // Relleno interno (variable)
+    
+    .hero { // Estilos para la sección del "hero" (imagen principal)
+        display: flex; // Usa flexbox para el diseño
+        justify-content: center; // Centra horizontalmente el contenido
+        align-items: center; // Centra verticalmente el contenido
+        width: 100%; // Ocupa todo el ancho disponible
+
+        
+        .hero-image { // Estilos para la imagen principal del "hero"
+            max-width: 100%; // La imagen no se масштаará más allá de su tamaño original
+            height: auto; // La altura se ajusta automáticamente para mantener la proporción
+            display: block; // Convierte la imagen en un elemento de bloque para centrarla
+            margin: 0 auto; // Centra la imagen horizontalmente
+        }
+    }
+
+    .promo { // Estilos para la sección de "promoción"
+        text-align: center; // Centra el texto
+        font-size: 1.2rem; // Tamaño de la fuente (variable)
+        font-weight: bold; // Texto en negrita
+        max-width: 600px; // Ancho máximo del contenedor
+        background-color: v.$color-fondo; // Color de fondo (variable)
+        padding: 1.5rem; // Relleno interno (variable)
+        border-radius: 10px; // Bordes redondeados
+    }
+
+    .comentarios { // Estilos para la sección de "comentarios"
+        display: flex; // Usa flexbox para el diseño
+        flex-direction: column; // Los elementos se organizan en columna
+        gap: 1rem; // Espacio entre los comentarios (variable)
+        max-width: 600px; // Ancho máximo del contenedor
+        padding: 1.5rem; // Relleno interno (variable)
+        border: 2px solid v.$color-boton; // Borde (variable)
+        border-radius: 10px; // Bordes redondeados
+        background-color: v.$color-fondo-texto; // Color de fondo (variable)
+        
+        p { // Estilos para los párrafos de comentarios
+            font-size: 1rem; // Tamaño de la fuente (variable)
+            color: v.$color-texto; // Color del texto (variable)
+            padding: 0.5rem; // Relleno interno
+        }
+    }
+
+    .btn-secondary { // Estilos para el botón secundario
+        @include mixins.button-styles(v.$color-boton, v.$color-texto); // Incluye el mixin con los colores del botón secundario
+    }
+}

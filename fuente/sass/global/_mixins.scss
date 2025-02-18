@@ -1,0 +1,22 @@
+@use "../global/variables.scss" as v;
+
+// Mixin para estilos de botones
+@mixin button-styles($background-color, $text-color) {
+    background-color: $background-color; // Color de fondo del botón
+    margin-top: 1.5rem; // Margen superior
+    padding: 12px 18px; // Relleno del botón
+    border-radius: 8px; // Bordes redondeados
+    font-weight: bold; // Texto en negrita
+    font-size: 1.2rem; // Tamaño de la fuente
+    color: $text-color; // Color del texto
+    border: 3px solid v.$color-borde-boton; // Borde del botón
+    border-radius: 5px; // Bordes redondeados
+    cursor: pointer; // Cursor al pasar por encima
+    transition: background-color 0.3s ease, transform 0.2s ease; // Transiciones suaves
+    font-family: v.$fuente-decorativa; // Fuente de la letra
+
+    &:hover {
+        background-color: v.$color-borde-boton; // Cambia el color de fondo
+        transform: scale(1.05); // Escala ligeramente el botón
+    }
+}
