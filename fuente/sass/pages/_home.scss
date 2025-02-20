@@ -51,6 +51,16 @@ body {
             max-width: 30%;
         }
     }
+
+    // Opcional: Interpolación para clases dinámicas
+    @for $i from 1 through 3 {
+        .columna-#{$i} {
+            // Estilos específicos para cada columna (si existen)
+            @if $i == 2 { // Ejemplo: estilos solo para la columna 2
+                background-color: lightblue;
+            }
+        }
+    }
 }
 
 // Estilos para las tarjetas de recetas
@@ -63,6 +73,10 @@ body {
     border-radius: 10px; // Bordes redondeados
     flex: 1; // Ocupa todo el espacio disponible
     max-width: 30%; // Ancho máximo del 30% del contenedor
+
+    // Operador para calcular un tamaño dinámico (opcional)
+    $padding-extra: 10px;
+    padding: 15px + $padding-extra; // Suma un valor extra al padding
 }
 
 // Estilos para las imágenes dentro de las tarjetas de recetas

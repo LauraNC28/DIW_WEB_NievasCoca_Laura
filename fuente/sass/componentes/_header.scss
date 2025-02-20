@@ -39,11 +39,8 @@
       margin: 0; // Elimina los márgenes predeterminados
 
       li a { // Estilos para los enlaces de navegación
-        text-decoration: none; // Elimina el subrayado
-        color: v.$color-texto; // Color del texto
-        font-weight: bold; // Texto en negrita
-        font-size: 1.3rem; // Tamaño de la fuente
-        font-family: v.$fuente-secundaria; // Fuente de la letra
+        // Estilos base para enlaces (se definen aparte)
+        @extend .enlace-base; 
 
         &:hover { // Estilos al pasar el ratón por encima
           color: v.$color-borde-boton; // Cambia el color del texto
@@ -52,6 +49,15 @@
     }
   }
 
+  // Estilos base para enlaces
+  .enlace-base {
+    text-decoration: none;
+    color: v.$color-texto;
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-family: v.$fuente-secundaria;
+  }
+  
   .btn-primary { // Estilos para el botón principal
     @include mixins.button-styles(v.$color-boton, v.$color-texto); // Incluye el mixin con los colores del botón primario
   }
