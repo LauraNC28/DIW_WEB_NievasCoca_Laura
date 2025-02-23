@@ -8,7 +8,7 @@
     font-weight: 600; // Establece el grosor de la fuente a semibold
     color: v.$color-texto; // Establece el color del texto usando una variable
   
-    nav { // Estilos para la navegación dentro del footer
+    aside { // Estilos para la navegación dentro del footer
         ul { // Estilos para la lista de enlaces
             list-style: none; // Elimina los puntos de la lista
             display: flex; // Usa flexbox para distribuir los elementos horizontalmente

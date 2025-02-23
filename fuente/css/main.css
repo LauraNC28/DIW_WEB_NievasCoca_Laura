@@ -83,23 +83,23 @@
   font-weight: 600;
   color: #333;
 }
-.footer nav ul {
+.footer aside ul {
   list-style: none;
   display: flex;
   justify-content: center;
   gap: 15px;
   padding: 0;
 }
-.footer nav a {
+.footer aside a {
   text-decoration: none;
   color: #333;
   font-size: 16px;
   transition: color 0.3s ease;
 }
-.footer nav a:hover {
+.footer aside a:hover {
   color: #FFC2A1;
 }
-.footer nav p {
+.footer aside p {
   margin: 0;
   font-size: 10px;
   text-align: right;
