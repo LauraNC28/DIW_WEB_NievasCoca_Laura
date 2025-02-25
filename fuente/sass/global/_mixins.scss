@@ -3,7 +3,6 @@
 // Mixin para estilos de botones
 @mixin button-styles($background-color, $text-color) {
     background-color: $background-color; // Color de fondo del botón
-    margin-top: 1.5rem; // Margen superior
     padding: 12px 18px; // Relleno del botón
     border-radius: 8px; // Bordes redondeados
     font-weight: bold; // Texto en negrita

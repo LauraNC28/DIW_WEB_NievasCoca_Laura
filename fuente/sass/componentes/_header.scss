@@ -1,7 +1,7 @@
 @use "../global/variables.scss" as v; // Importa las variables y les asigna el alias "v"
 @use "../global/mixins.scss" as mixins; // Importa mixins y se asigna a el alias "mixins"
 
-.header { // Estilos para el encabezado principal
+/*.header { // Estilos para el encabezado principal
   display: flex; // Usa flexbox para el diseño
   align-items: center; // Centra verticalmente los elementos
   justify-content: space-between; // Distribuye los elementos en el espacio disponible
@@ -63,6 +63,23 @@
   }
 }
 
+// Media Query para tabletas (768px - 964px)
+@media (max-width: 964px) and (min-width: 768px) {
+  .header {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .nav ul {
+      flex-direction: row; // Mantenemos la navegación en fila
+      gap: 1rem; // Reducimos el espacio entre los elementos
+  }
+
+  .logo img {
+      width: 60px; // Reducimos el tamaño del logo
+  }
+}
+
 // Media Query para diseño responsivo en pantallas pequeñas (móviles)
 @media (max-width: 768px) {
   .header { // Estilos para el encabezado en pantallas pequeñas
@@ -77,5 +94,125 @@
 
   .logo img { // Estilos para el logo en pantallas pequeñas
     width: 50px; // Ancho del logo
+  }
+}*/
+
+
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  background-color: v.$color-header;
+  border: 3px solid v.$color-borde-seccion;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+          width: 80px;
+          height: auto;
+          border-radius: 50%;
+      }
+  }
+
+  .nav {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      ul {
+          list-style: none;
+          display: flex;
+          gap: 2rem;
+          align-items: center;
+          padding: 0;
+          margin: 0;
+
+          li a {
+              @extend .enlace-base;
+
+              &:hover {
+                  color: v.$color-borde-boton;
+              }
+          }
+      }
+  }
+
+  .enlace-base {
+      text-decoration: none;
+      color: v.$color-texto;
+      font-weight: bold;
+      font-size: 1.3rem;
+      font-family: v.$fuente-secundaria;
+  }
+
+  .btn-primary {
+      @include mixins.button-styles(v.$color-boton, v.$color-texto);
+  }
+}
+
+// Media Query para tabletas (768px - 964px)
+@media (max-width: 964px) and (min-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav ul {
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap; // Añadimos flex-wrap: wrap;
+    justify-content: center; // Centramos los elementos
+  }
+
+  .nav ul li a {
+    font-size: 1rem; // Ajustamos el tamaño de la fuente
+    padding: 0.5rem; // Añadimos padding
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .btn-primary {
+    font-size: 1rem; // Ajustamos el tamaño de la fuente del botón
+    padding: 8px 12px; // Ajustamos el padding del botón
+  }
+}
+
+// Media Query para móviles (menos de 768px)
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .nav ul {
+      flex-direction: row;
+      gap: 0.5rem;
+      flex-wrap: wrap; // Añadimos flex-wrap: wrap;
+      justify-content: center; // Centramos los elementos
+  }
+
+  .nav ul li a {
+      font-size: 1rem; // Ajustamos el tamaño de la fuente
+      padding: 0.5rem; // Añadimos padding
+  }
+
+  .logo img {
+      width: 50px;
+  }
+
+  .btn-primary {
+      font-size: 0.8rem;
+      padding: 6px 10px;
   }
 }

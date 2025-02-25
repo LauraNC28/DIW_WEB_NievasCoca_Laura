@@ -14,7 +14,6 @@ body { // Estilos para el cuerpo de la página
     flex-direction: column; // Los elementos se organizan en columna
     align-items: center; // Centra los elementos horizontalmente
     gap: 2rem; // Espacio entre las secciones (variable)
-    padding: 2rem; // Relleno interno (variable)
     
     .hero { // Estilos para la sección del "hero" (imagen principal)
         display: flex; // Usa flexbox para el diseño

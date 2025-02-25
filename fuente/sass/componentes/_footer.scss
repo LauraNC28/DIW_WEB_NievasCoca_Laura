@@ -1,37 +1,91 @@
 @use "../global/variables.scss" as v; // Importa las variables desde el archivo _variables.scss y asigna un alias "v"
 
-.footer { // Estilos para el pie de página
+.footer {
     background-color: v.$color-footer; // Establece el color de fondo del footer usando una variable
-    text-align: center; // Centra el texto horizontalmente
-    padding: 20px; // Añade un espacio de relleno de 20px alrededor del contenido
-    font-family: v.$fuente-secundaria; // Usa una fuente de letra específica para el footer
-    font-weight: 600; // Establece el grosor de la fuente a semibold
+    width: 100%; // Asegura que el footer ocupe todo el ancho de la página
+    font-family: v.$fuente-secundaria; // Establece la fuente del texto usando una variable
+    font-weight: 600; // Establece el grosor de la fuente
     color: v.$color-texto; // Establece el color del texto usando una variable
-  
-    aside { // Estilos para la navegación dentro del footer
-        ul { // Estilos para la lista de enlaces
-            list-style: none; // Elimina los puntos de la lista
-            display: flex; // Usa flexbox para distribuir los elementos horizontalmente
-            justify-content: center; // Centra los elementos horizontalmente
-            gap: 15px; // Espacio entre los elementos de la lista
-            padding: 0; // Elimina el relleno predeterminado de la lista
-        }
-  
-        a { // Estilos para los enlaces
-            text-decoration: none; // Elimina el subrayado de los enlaces
-            color: v.$color-texto; // Establece el color del texto usando una variable
-            font-size: 16px; // Tamaño de la letra
-            transition: color 0.3s ease; // Transición suave del color al pasar el ratón
 
-            &:hover { // Estilos al pasar el ratón por encima del enlace
-                color: v.$color-borde-boton; // Cambia el color del texto al color del borde del botón
-            }
+    aside {
+        width: 100%; //El ancho se maneja desde el footer
+        margin: 0 auto; // Centra el contenido del aside horizontalmente
+        display: flex; // Usa flexbox para el diseño
+        flex-direction: column; // Organiza los elementos en columna
+        align-items: center; // Centra los elementos horizontalmente
+    }
+
+    ul {
+        list-style: none; // Elimina los estilos de lista predeterminados
+        padding: 0; // Elimina el padding predeterminado
+        display: flex; // Usa flexbox para el diseño
+        justify-content: center; // Centra los elementos horizontalmente
+        flex-wrap: wrap; // Permite que los elementos pasen a la siguiente línea si no caben
+        align-self: center; // Centra la lista horizontalmente dentro del aside
+    }
+
+    li {
+        margin-bottom: 10px; // Añade margen inferior para separar los elementos
+        margin-right: 20px; // Añade margen derecho para separar los elementos
+        position: relative; // Permite posicionar elementos relativos a este elemento
+    }
+
+    .nav-links,
+    .social-links {
+        position: static; // Posiciona los elementos estáticamente
+        background-color: transparent; // Hace el fondo transparente
+        padding: 0; // Elimina el padding
+        border-radius: 0; // Elimina los bordes redondeados
+        flex-direction: column; // Organiza los elementos en columna
+        align-items: center; // Centra los elementos horizontalmente
+        gap: 8px; // Añade espacio entre los elementos
+        margin-top: 10px; // Añade margen superior para separar los elementos
+        width: 100%; // El ancho se maneja desde el footer
+        font-family: v.$fuente-principal; // Establece la fuente del texto usando una variable
+    }
+
+    a {
+        text-decoration: none; // Elimina la decoración de texto predeterminada
+        color: v.$color-texto; // Establece el color del texto usando una variable
+        font-size: 16px; // Establece el tamaño de la fuente
+        transition: color 0.3s ease; // Añade una transición suave al cambio de color
+        
+        &:hover {
+            color: v.$color-borde-boton; // Cambia el color al pasar el ratón usando una variable
         }
-  
-        p { // Estilos para el párrafo
-            margin: 0; // Elimina los márgenes predeterminados
-            font-size: 10px; // Tamaño de la letra
-            text-align: right; // Alinea el texto a la derecha
+    }
+
+    .social-links {
+        margin-top: 10px; // Añade margen superior para separar los elementos
+
+        a {
+            font-size: 14px; // Establece el tamaño de la fuente
+            font-family: v.$fuente-principal; // Establece la fuente del texto usando una variable
+            
+        }
+    }
+
+    p {
+        margin-top: 15px; // Añade margen superior para separar el párrafo
+        font-size: 10px; // Establece el tamaño de la fuente
+        text-align: right; // Alinea el texto a la derecha
+        align-self: flex-end; // Alinea el párrafo al final del aside
+    }
+
+    // Estilos para dispositivos móviles y tabletas
+    @media (max-width: 768px) {
+        ul {
+            flex-direction: column; // Apila los elementos en columna en pantallas pequeñas
+            align-items: center; // Centra los elementos en columna
+        }
+
+        li {
+            margin-right: 0; // Elimina el margen derecho en pantallas pequeñas
+        }
+
+        .nav-links,
+        .social-links {
+            align-items: center; // Centra los subenlaces en pantallas pequeñas
         }
     }
 }
