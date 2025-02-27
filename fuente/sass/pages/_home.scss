@@ -94,6 +94,14 @@ body {
     max-width: 400px; // Ancho máximo de la imagen
 }
 
+// Evitar carga innecesaria de imágenes en Firefox
+@supports (-moz-appearance: none) {
+    .receta img {
+        max-width: 100%; // Limita el tamaño según el contenedor
+        width: auto; // Permite que Firefox elija la imagen óptima
+    }
+}
+
 .receta p {
     margin-top: 10px; // Espacio entre la imagen y el texto
 }

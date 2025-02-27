@@ -1,99 +1,3 @@
-@charset "UTF-8";
-/*.header { // Estilos para el encabezado principal
-  display: flex; // Usa flexbox para el diseño
-  align-items: center; // Centra verticalmente los elementos
-  justify-content: space-between; // Distribuye los elementos en el espacio disponible
-  margin: 0 auto; // Márgenes superior e inferior 0, centrado horizontal
-  padding: 1rem 2rem; // Relleno superior/inferior 1rem, izquierda/derecha 2rem
-  background-color: v.$color-header; // Color de fondo del encabezado
-  border: 3px solid v.$color-borde-seccion; // Borde del encabezado
-  border-radius: 5px; // Bordes redondeados
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra del encabezado
-
-  .logo { // Estilos para el contenedor del logo
-    display: flex; // Usa flexbox para el diseño
-    align-items: center; // Centra verticalmente los elementos
-    justify-content: center; // Centra horizontalmente los elementos
-
-    img { // Estilos para la imagen del logo
-      width: 80px; // Ancho del logo
-      height: auto; // Altura automática para mantener la proporción
-      border-radius: 50%; // Logo circular
-    }
-  }
-
-  .nav { // Estilos para la navegación
-    flex-grow: 1; // Permite que la navegación se expanda para llenar el espacio
-    display: flex; // Usa flexbox para el diseño
-    justify-content: center; // Centra horizontalmente los elementos
-    align-items: center; // Centra verticalmente los elementos
-
-    ul { // Estilos para la lista de navegación
-      list-style: none; // Elimina los puntos de la lista
-      display: flex; // Usa flexbox para el diseño
-      gap: 2rem; // Espacio entre los elementos de la lista
-      align-items: center; // Centra verticalmente los elementos
-      padding: 0; // Elimina el relleno predeterminado
-      margin: 0; // Elimina los márgenes predeterminados
-
-      li a { // Estilos para los enlaces de navegación
-        // Estilos base para enlaces (se definen aparte)
-        @extend .enlace-base; 
-
-        &:hover { // Estilos al pasar el ratón por encima
-          color: v.$color-borde-boton; // Cambia el color del texto
-        }
-      }
-    }
-  }
-
-  // Estilos base para enlaces
-  .enlace-base {
-    text-decoration: none;
-    color: v.$color-texto;
-    font-weight: bold;
-    font-size: 1.3rem;
-    font-family: v.$fuente-secundaria;
-  }
-
-  .btn-primary { // Estilos para el botón principal
-    @include mixins.button-styles(v.$color-boton, v.$color-texto); // Incluye el mixin con los colores del botón primario
-  }
-}
-
-// Media Query para tabletas (768px - 964px)
-@media (max-width: 964px) and (min-width: 768px) {
-  .header {
-      flex-direction: column;
-      text-align: center;
-  }
-
-  .nav ul {
-      flex-direction: row; // Mantenemos la navegación en fila
-      gap: 1rem; // Reducimos el espacio entre los elementos
-  }
-
-  .logo img {
-      width: 60px; // Reducimos el tamaño del logo
-  }
-}
-
-// Media Query para diseño responsivo en pantallas pequeñas (móviles)
-@media (max-width: 768px) {
-  .header { // Estilos para el encabezado en pantallas pequeñas
-    flex-direction: column; // Diseño en columna
-    text-align: center; // Texto centrado
-  }
-
-  .nav ul { // Estilos para la lista de navegación en pantallas pequeñas
-    flex-direction: column; // Diseño en columna
-    gap: 1rem; // Espacio entre elementos
-  }
-
-  .logo img { // Estilos para el logo en pantallas pequeñas
-    width: 50px; // Ancho del logo
-  }
-}*/
 .header {
   display: flex;
   align-items: center;
@@ -187,20 +91,21 @@
   }
   .nav ul {
     flex-direction: row;
-    gap: 0.5rem;
+    gap: 0.3rem;
     flex-wrap: wrap;
     justify-content: center;
   }
   .nav ul li a {
-    font-size: 1rem;
-    padding: 0.5rem;
+    font-size: 0.9rem;
+    padding: 0.3rem 0rem;
+    letter-spacing: -0.9px;
   }
-  .logo img {
-    width: 50px;
+  .logo-image {
+    width: 60px;
   }
   .btn-primary {
-    font-size: 0.8rem;
-    padding: 6px 10px;
+    font-size: 0.75rem;
+    padding: 4px 8px;
   }
 }
 .footer {
@@ -299,11 +204,14 @@ body {
   align-items: center;
   width: 100%;
 }
-.landing .hero .hero-image {
+.landing .hero picture {
+  max-width: 100%;
+  display: block;
+}
+.landing .hero picture img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto;
 }
 .landing .promo {
   text-align: center;
@@ -407,6 +315,12 @@ body {
   max-width: 400px;
 }
 
+@supports (-moz-appearance: none) {
+  .receta img {
+    max-width: 100%;
+    width: auto;
+  }
+}
 .receta p {
   margin-top: 10px;
 }

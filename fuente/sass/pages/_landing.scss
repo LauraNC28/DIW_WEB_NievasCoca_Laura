@@ -22,11 +22,15 @@ body { // Estilos para el cuerpo de la página
         width: 100%; // Ocupa todo el ancho disponible
 
         
-        .hero-image { // Estilos para la imagen principal del "hero"
-            max-width: 100%; // La imagen no se масштаará más allá de su tamaño original
-            height: auto; // La altura se ajusta automáticamente para mantener la proporción
-            display: block; // Convierte la imagen en un elemento de bloque para centrarla
-            margin: 0 auto; // Centra la imagen horizontalmente
+        picture {
+            max-width: 100%; // Asegura que el contenedor no exceda su tamaño
+            display: block; // Evita espacios adicionales en imágenes inline
+
+            img {
+                max-width: 100%; // La imagen se ajusta al contenedor
+                height: auto; // Mantiene la proporción original
+                display: block; // Elimina espacios en blanco no deseados
+            }
         }
     }
 
