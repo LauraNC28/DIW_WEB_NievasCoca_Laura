@@ -1,0 +1,268 @@
+@use "../global/variables.scss" as v; // Importa las variables y les asigna el alias "v"
+@use "../global/funciones.scss" as f; // Importa las funciones y les asigna el alias "f"
+
+// Estilos generales para el cuerpo de la página
+body {
+    background-color: v.$color-fondo; // Color de fondo del cuerpo
+    color: v.$color-texto; // Color de texto principal
+    font-family: v.$fuente-principal; // Fuente de texto principal
+    margin: 0; // Elimina los márgenes predeterminados
+    padding: 0; // Elimina el relleno predeterminado
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 0 1rem;
+    
+    .search-box {
+        display: flex;
+        align-items: center;
+        margin: 2rem auto;
+        border: 1px solid v.$color-borde-buscador;
+        background-color: v.$color-fondo-buscador;
+        border-radius: 4px;
+        padding: 0.3rem 0.5rem;
+        margin-bottom: 2rem;
+        width: 600px;
+        max-width: 100%;
+        img {
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.4rem;
+        }
+        input {
+            border: none;
+            outline: none;
+            flex: 1;
+        }
+    }
+
+    .menu-categorias-movil {
+        display: none; // Ocultar el menú móvil en pantallas grandes
+    }
+
+    .contenedor-principal {
+        display: flex;
+        .menu-categorias {
+            width: 250px;
+            margin-right: 2rem;
+            .categorias {
+                background-color: v.$color-fondo;
+                border: 1px solid v.$color-borde-seccion;
+                border-radius: 8px;
+                overflow: hidden;
+                h2 {
+                    text-align: center;
+                    padding: 1rem 0;
+                    margin: 0;
+                    font-weight: 600;
+                    background-color: v.$color-fondo-categorias;
+                }
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    li {
+                        display: flex;
+                        align-items: center;
+                        padding: 0.5rem 1rem;
+                        border-bottom: 1px solid v.$color-borde-seccion;
+                        span {
+                            background-color: v.$color-fondo-categorias;
+                            color: v.$color-texto;
+                            width: 2rem;
+                            height: 2rem;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-right: 0.5rem;
+                            font-family: v.$fuente-principal;
+                            font-weight: 400;
+                        }
+                        a {
+                            text-decoration: none;
+                            color: v.$color-texto;
+                            font-family: v.$fuente-principal;
+                            font-weight: 600;
+                            flex: 1;
+                        }
+                    }
+                    li:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .recetas {
+        text-align: center; // Centra el texto del título
+        margin: 20px 0; // Márgenes superior e inferior
+        background-color: v.$color-seccion-titulo; // Color de fondo del título
+        border: 2px solid v.$color-borde-seccion; // Borde del título
+        font-family: v.$fuente-secundaria; // Fuente de texto secundaria
+        font-weight: bold; // Texto en negrita
+        padding: 10px; // Relleno interno
+        border-radius: 8px; // Bordes redondeados
+    }
+
+    // Estilos para la cuadrícula de recetas
+    .recetas-grid {
+        display: flex; // Usa flexbox para el diseño de la cuadrícula
+        justify-content: center; // Centra las imágenes horizontalmente
+        gap: 20px; // Espacio entre las recetas
+        flex-wrap: wrap; // Permite que las recetas se ajusten a varias líneas
+        max-width: 100vw; // Ancho máximo del 100% del viewport
+        overflow: hidden; // Oculta el contenido que se desborda
+
+        // Utiliza la función para definir el número de columnas
+        $columns: f.grid-columns(1024px); // Ejemplo: Para un ancho de pantalla de 1024px
+
+        @if $columns == 1 {
+            // Estilos para una columna
+            .receta {
+                max-width: 100%;
+            }
+        } @else if $columns == 2 {
+            // Estilos para dos columnas
+            .receta {
+                max-width: 45%; // Ajusta el ancho para dos columnas
+            }
+        } @else {
+            // Estilos para tres columnas
+            .receta {
+                max-width: 30%;
+            }
+        }
+
+        // Opcional: Interpolación para clases dinámicas
+        @for $i from 1 through 3 {
+            .columna-#{$i} {
+                // Estilos específicos para cada columna (si existen)
+                @if $i == 2 { // Ejemplo: estilos solo para la columna 2
+                    background-color: lightblue;
+                }
+            }
+        }
+    }
+
+    // Estilos para las tarjetas de recetas
+    .receta {
+        background-color: v.$color-fondo-receta; // Color de fondo de la tarjeta
+        font-family: v.$fuente-secundaria; // Fuente de texto secundaria
+        font-weight: 600; // Texto en negrita
+        text-align: center; // Centra el texto de la receta
+        padding: 15px; // Relleno interno
+        border-radius: 10px; // Bordes redondeados
+        flex: 1; // Ocupa todo el espacio disponible
+        max-width: 30%; // Ancho máximo del 30% del contenedor
+
+        // Operador para calcular un tamaño dinámico (opcional)
+        $padding-extra: 10px;
+        padding: 15px + $padding-extra; // Suma un valor extra al padding
+    }
+
+    // Estilos para las imágenes dentro de las tarjetas de recetas
+    .receta picture {
+        display: block; // Ocupa todo el ancho disponible
+        width: 100%; // Ancho del 100% de la tarjeta
+        height: auto; // Altura automática para mantener la proporción
+    }
+
+    .receta img {
+        width: 100%; // Ancho del 100% del contenedor
+        height: auto; // Altura automática para mantener la proporción
+        object-fit: contain; // Ajusta la imagen al contenedor sin distorsionar
+        border-radius: 8px; // Bordes redondeados
+        max-width: 400px; // Ancho máximo de la imagen
+    }
+
+    // Evitar carga innecesaria de imágenes en Firefox
+    @supports (-moz-appearance: none) {
+        .receta img {
+            max-width: 100%; // Limita el tamaño según el contenedor
+            width: auto; // Permite que Firefox elija la imagen óptima
+        }
+    }
+
+    .receta p {
+        margin-top: 10px; // Espacio entre la imagen y el texto
+    }
+
+    // Estilos para los botones de receta
+    .boton-receta {
+        background-color: v.$color-boton; // Color de fondo del botón
+        border: 2px solid v.$color-borde-boton; // Borde del botón
+        font-family: v.$fuente-decorativa; // Fuente de texto decorativa
+        font-weight: 400; // Texto normal
+        padding: 8px 15px; // Relleno interno
+        border-radius: 8px; // Bordes redondeados
+        cursor: pointer; // Cursor de puntero al pasar por encima
+        color: v.$color-texto; // Color de texto
+
+        &:hover { // Estilos al pasar el ratón por encima
+            background-color: v.$color-borde-boton; // Cambia el color de fondo
+        }
+    }
+}
+
+// Media query para tablets y móviles
+@media (max-width: 1024px) {
+    .menu-categorias {
+        display: none; /* Oculta el menú lateral en pantallas pequeñas */
+    }
+
+    .menu-categorias-movil {
+        position: relative;
+        width: 100%;
+        display: block;
+        margin-top: 10px; /* Ajusta según sea necesario */
+        z-index: 9999 !important;
+        display: block !important;
+    }
+
+    .menu-categorias-movil .categorias { /* Selector ajustado para section.categorias */
+        display: flex;
+        align-items: center;
+        overflow-x: auto; /* Permite desplazamiento horizontal */
+        white-space: nowrap; /* Evita saltos de línea en los elementos */
+        padding: 0.5rem;
+        background-color: v.$color-fondo-menu;
+        border-radius: 8px;
+    }
+
+    .menu-categorias-movil .categorias li { /* Estilos para los elementos li dentro de section.categorias */
+        display: inline-block; /* Permite que los elementos li estén en línea */
+    }
+
+    .menu-categorias-movil .categorias li a { /* Estilos para los enlaces dentro de section.categorias */
+        display: block;
+        padding: 0.5rem 1rem;
+        border: 1px solid v.$color-borde-seccion;
+        border-radius: 4px;
+        text-decoration: none;
+        color: #333333; /* Color de texto #333333 */
+        background-color: v.$color-fondo-categorias;
+        font-weight: 400; /* Peso de fuente regular */
+        font-family: 'Open Sans', sans-serif; /* Fuente Open Sans Regular */
+    }
+
+    
+}
+
+@media (max-width: 768px) {
+    .search-box {
+        width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .search-box {
+        width: 300px;
+        margin: 0 auto;
+    }
+}

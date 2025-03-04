@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header {
   display: flex;
   align-items: center;
@@ -38,7 +39,7 @@
 }
 .header .enlace-base, .header .nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: #333333;
   font-weight: bold;
   font-size: 1.3rem;
   font-family: "Montserrat", sans-serif;
@@ -49,7 +50,7 @@
   border-radius: 8px;
   font-weight: bold;
   font-size: 1.2rem;
-  color: #333;
+  color: #333333;
   border: 3px solid #FFC2A1;
   border-radius: 5px;
   cursor: pointer;
@@ -113,7 +114,7 @@
   width: 100%;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  color: #333;
+  color: #333333;
 }
 .footer aside {
   width: 100%;
@@ -150,7 +151,7 @@
 }
 .footer a {
   text-decoration: none;
-  color: #333;
+  color: #333333;
   font-size: 16px;
   transition: color 0.3s ease;
 }
@@ -186,7 +187,7 @@
 
 body {
   background-color: #FFE8E8;
-  color: #333;
+  color: #333333;
   font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
@@ -230,11 +231,11 @@ body {
   padding: 1.5rem;
   border: 2px solid #FFD3C2;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: #FFFFFF;
 }
 .landing .comentarios p {
   font-size: 1rem;
-  color: #333;
+  color: #333333;
   padding: 0.5rem;
 }
 .landing .btn-secondary {
@@ -243,7 +244,7 @@ body {
   border-radius: 8px;
   font-weight: bold;
   font-size: 1.2rem;
-  color: #333;
+  color: #333333;
   border: 3px solid #FFC2A1;
   border-radius: 5px;
   cursor: pointer;
@@ -257,7 +258,7 @@ body {
 
 body {
   background-color: #FFE8E8;
-  color: #333;
+  color: #333333;
   font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
@@ -333,7 +334,7 @@ body {
   padding: 8px 15px;
   border-radius: 8px;
   cursor: pointer;
-  color: #333;
+  color: #333333;
 }
 .boton-receta:hover {
   background-color: #FFC2A1;
@@ -342,6 +343,217 @@ body {
 @media (max-width: 1024px) {
   .recetas-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+body {
+  background-color: #FFE8E8;
+  color: #333333;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 0 1rem;
+}
+main .search-box {
+  display: flex;
+  align-items: center;
+  margin: 2rem auto;
+  border: 1px solid #333333;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  margin-bottom: 2rem;
+  width: 600px;
+  max-width: 100%;
+}
+main .search-box img {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.4rem;
+}
+main .search-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+}
+main .menu-categorias-movil {
+  display: none;
+}
+main .contenedor-principal {
+  display: flex;
+}
+main .contenedor-principal .menu-categorias {
+  width: 250px;
+  margin-right: 2rem;
+}
+main .contenedor-principal .menu-categorias .categorias {
+  background-color: #FFE8E8;
+  border: 1px solid #E0BBB0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+main .contenedor-principal .menu-categorias .categorias h2 {
+  text-align: center;
+  padding: 1rem 0;
+  margin: 0;
+  font-weight: 600;
+  background-color: #FFDFDF;
+}
+main .contenedor-principal .menu-categorias .categorias ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+main .contenedor-principal .menu-categorias .categorias ul li {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E0BBB0;
+}
+main .contenedor-principal .menu-categorias .categorias ul li span {
+  background-color: #FFDFDF;
+  color: #333333;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+main .contenedor-principal .menu-categorias .categorias ul li a {
+  text-decoration: none;
+  color: #333333;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  flex: 1;
+}
+main .contenedor-principal .menu-categorias .categorias ul li:last-child {
+  border-bottom: none;
+}
+main .recetas {
+  text-align: center;
+  margin: 20px 0;
+  background-color: #FFDFDF;
+  border: 2px solid #E0BBB0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+}
+main .recetas-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  overflow: hidden;
+}
+main .recetas-grid .receta {
+  max-width: 30%;
+}
+main .recetas-grid .columna-2 {
+  background-color: lightblue;
+}
+main .receta {
+  background-color: #FFDFDF;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  flex: 1;
+  max-width: 30%;
+  padding: 25px;
+}
+main .receta picture {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+main .receta img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  max-width: 400px;
+}
+@supports (-moz-appearance: none) {
+  main .receta img {
+    max-width: 100%;
+    width: auto;
+  }
+}
+main .receta p {
+  margin-top: 10px;
+}
+main .boton-receta {
+  background-color: #FFD3C2;
+  border: 2px solid #FFC2A1;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #333333;
+}
+main .boton-receta:hover {
+  background-color: #FFC2A1;
+}
+
+@media (max-width: 1024px) {
+  .menu-categorias {
+    display: none; /* Oculta el menú lateral en pantallas pequeñas */
+  }
+  .menu-categorias-movil {
+    position: relative;
+    width: 100%;
+    display: block;
+    margin-top: 10px; /* Ajusta según sea necesario */
+    z-index: 9999 !important;
+    display: block !important;
+  }
+  .menu-categorias-movil .categorias { /* Selector ajustado para section.categorias */
+    display: flex;
+    align-items: center;
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+    white-space: nowrap; /* Evita saltos de línea en los elementos */
+    padding: 0.5rem;
+    background-color: #FFC2A1;
+    border-radius: 8px;
+  }
+  .menu-categorias-movil .categorias li { /* Estilos para los elementos li dentro de section.categorias */
+    display: inline-block; /* Permite que los elementos li estén en línea */
+  }
+  .menu-categorias-movil .categorias li a { /* Estilos para los enlaces dentro de section.categorias */
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 1px solid #E0BBB0;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333333; /* Color de texto #333333 */
+    background-color: #FFDFDF;
+    font-weight: 400; /* Peso de fuente regular */
+    font-family: "Open Sans", sans-serif; /* Fuente Open Sans Regular */
+  }
+}
+@media (max-width: 768px) {
+  .search-box {
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .search-box {
+    width: 300px;
+    margin: 0 auto;
   }
 }
 

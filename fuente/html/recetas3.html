@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Recetas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Montserrat:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <picture>
+            <!--Formato WEBP-->
+            <source srcset="../media/img/logo_blog_200x200.webp" type="image/webp" media="(min-width:200px)">
+
+            <!--Formato PNG-->
+            <source srcset="../media/img/logo_blog_200x200.png" type="image/png" media="(min-width:200px)">
+
+            <!--Formato JPG-->
+            <source srcset="../media/img/logo_blog_200x200.jpg" type="image/jpeg" media="(min-width:200px)">
+
+            <!--Imagen por defecto (para navegadores antiguos)-->
+            <img src="../media/img/logo_blog_200x200.png" alt="Imagen del logo del blog" class="logo-image">
+        </picture>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../html/recetas.html">Recetas</a></li>
+                <li><a href="#">Foro</a></li>
+                <li><a href="#">Sobre Mí</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Cuenta</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <article class="search-box">
+            <img src="../media/img/lupa.png" alt="Buscar">
+            <input type="text" placeholder="Buscar...">
+        </article>
+
+        <nav class="menu-categorias-movil">
+            <section class="categorias">
+                <h3>Categorías</h3>
+                <ul>
+                    <li><a href="../html/recetas1.html">Postres</a></li>
+                    <li><a href="../html/recetas2.html">Desayunos</a></li>
+                    <li><a href="../html/recetas3.html">Sin gluten</a></li>
+                    <li><a href="../html/recetas.html">Básicas</a></li>
+                </ul>
+            </section>
+        </nav>
+
+        <article class="contenedor-principal">
+            <aside class="menu-categorias">
+                <section class="categorias">
+                    <h2>Categorías</h2>
+                    <ul>
+                        <li>
+                            <span>P</span>
+                            <a href="../html/recetas1.html">Postres</a>
+                        </li>
+                        <li>
+                            <span>D</span>
+                            <a href="../html/recetas2.html">Desayunos</a>
+                        </li>
+                        <li>
+                            <span>S</span>
+                            <a href="../html/recetas3.html">Sin gluten</a>
+                        </li>
+                        <li>
+                            <span>B</span>
+                            <a href="../html/recetas.html">Básicas</a>
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+
+        <section class="recetas">
+            <h1>Sin gluten</h1>
+            <section class="recetas-grid">
+                <article class="receta"> 
+                    <picture>
+                        <!--Formato WEBP-->
+                        <source srcset="../media/img/recetas_categoria_31_480x320.webp" type="image/webp" media="(max-width: 479px)">
+                        <source srcset="../media/img/recetas_categoria_31_768x512.webp" type="image/webp" media="(min-width: 480px) and (max-width: 767px)">
+                        <source srcset="../media/img/recetas_categoria_31_1200x800.webp" type="image/webp" media="(min-width: 768px) and (max-width: 1199px)">
+                        <source srcset="../media/img/recetas_categoria_31_1280x853.webp" type="image/webp" media="(min-width: 1200px) and (max-width: 1279px)">
+                        <source srcset="../media/img/recetas_categoria_31_1920x1280.webp" type="image/webp" media="(min-width: 1280px) and (max-width: 1919px)">
+                        <source srcset="../media/img/recetas_categoria_31_2560x1706.webp" type="image/webp" media="(min-width: 1920px)">
+                        
+                        <!--Formato PNG-->
+                        <source srcset="../media/img/recetas_categoria_31_480x320.png" type="image/png" media="(max-width: 479px)">
+                        <source srcset="../media/img/recetas_categoria_31_768x512.png" type="image/png" media="(min-width: 480px) and (max-width: 767px)">
+                        <source srcset="../media/img/recetas_categoria_31_1200x800.png" type="image/png" media="(min-width: 768px) and (max-width: 1199px)">
+                        <source srcset="../media/img/recetas_categoria_31_1280x853.png" type="image/png" media="(min-width: 1200px) and (max-width: 1279px)">
+                        <source srcset="../media/img/recetas_categoria_31_1920x1280.png" type="image/png" media="(min-width: 1280px) and (max-width: 1919px)">
+                        <source srcset="../media/img/recetas_categoria_31_2560x1706.png" type="image/png" media="(min-width: 1920px)">
+                        
+                        <!--Formato JPG-->
+                        <source srcset="../media/img/recetas_categoria_31_480x320.jpg" type="image/jpeg" media="(max-width: 479px)">
+                        <source srcset="../media/img/recetas_categoria_31_768x512.jpg" type="image/jpeg" media="(min-width: 480px) and (max-width: 767px)">
+                        <source srcset="../media/img/recetas_categoria_31_1200x800.jpg" type="image/jpeg" media="(min-width: 768px) and (max-width: 1199px)">
+                        <source srcset="../media/img/recetas_categoria_31_1280x853.jpg" type="image/jpeg" media="(min-width: 1200px) and (max-width: 1279px)">
+                        <source srcset="../media/img/recetas_categoria_31_1920x1280.jpg" type="image/jpeg" media="(min-width: 1280px) and (max-width: 1919px)">
+                        <source srcset="../media/img/recetas_categoria_31_2560x1706.jpg" type="image/jpeg" media="(min-width: 1920px)">
+                        
+                        <!--Imagen por defecto (para navegadores antiguos)-->
+                        <img src="../media/img/recetas_categoria_31_480x320.webp" alt="Receta categoría sin gluten 1">
+                    </picture>
+                    <h2>Tarta de chocolate y manzana</h2>
+                    <p>Dulce y jugosa, ideal para quienes buscan un postre sin gluten.</p>
+                    <button class="boton-receta">Ver receta</button> 
+                </article>
+            
+                <article class="receta"> 
+                    <picture>
+                        <!--Formato WEBP-->
+                        <source srcset="../media/img/recetas_categoria_32_480x320.webp" type="image/webp" media="(max-width: 479px)">
+                        <source srcset="../media/img/recetas_categoria_32_768x512.webp" type="image/webp" media="(min-width: 480px) and (max-width: 767px)">
+                        <source srcset="../media/img/recetas_categoria_32_1200x800.webp" type="image/webp" media="(min-width: 768px) and (max-width: 1199px)">
+                        <source srcset="../media/img/recetas_categoria_32_1280x853.webp" type="image/webp" media="(min-width: 1200px) and (max-width: 1279px)">
+                        <source srcset="../media/img/recetas_categoria_32_1920x1280.webp" type="image/webp" media="(min-width: 1280px) and (max-width: 1919px)">
+                        <source srcset="../media/img/recetas_categoria_32_2560x1706.webp" type="image/webp" media="(min-width: 1920px)">
+                        
+                        <!--Formato PNG-->
+                        <source srcset="../media/img/recetas_categoria_32_480x320.png" type="image/png" media="(max-width: 479px)">
+                        <source srcset="../media/img/recetas_categoria_32_768x512.png" type="image/png" media="(min-width: 480px) and (max-width: 767px)">
+                        <source srcset="../media/img/recetas_categoria_32_1200x800.png" type="image/png" media="(min-width: 768px) and (max-width: 1199px)">
+                        <source srcset="../media/img/recetas_categoria_32_1280x853.png" type="image/png" media="(min-width: 1200px) and (max-width: 1279px)">
+                        <source srcset="../media/img/recetas_categoria_32_1920x1280.png" type="image/png" media="(min-width: 1280px) and (max-width: 1919px)">
+                        <source srcset="../media/img/recetas_categoria_32_2560x1706.png" type="image/png" media="(min-width: 1920px)">
+                        
+                        <!--Formato JPG-->
+                        <source srcset="../media/img/recetas_categoria_32_480x320.jpg" type="image/jpeg" media="(max-width: 479px)">
+                        <source srcset="../media/img/recetas_categoria_32_768x512.jpg" type="image/jpeg" media="(min-width: 480px) and (max-width: 767px)">
+                        <source srcset="../media/img/recetas_categoria_32_1200x800.jpg" type="image/jpeg" media="(min-width: 768px) and (max-width: 1199px)">
+                        <source srcset="../media/img/recetas_categoria_32_1280x853.jpg" type="image/jpeg" media="(min-width: 1200px) and (max-width: 1279px)">
+                        <source srcset="../media/img/recetas_categoria_32_1920x1280.jpg" type="image/jpeg" media="(min-width: 1280px) and (max-width: 1919px)">
+                        <source srcset="../media/img/recetas_categoria_32_2560x1706.jpg" type="image/jpeg" media="(min-width: 1920px)">
+                        
+                        <!--Imagen por defecto (para navegadores antiguos)-->
+                        <img src="../media/img/recetas_categoria_32_480x320.webp" alt="Receta categoría sin gluten 2">
+                    </picture>
+                    <h2>Ensalada de garbanzos con pepino y pan</h2>
+                    <p>Fresca y llena de proteínas, perfecta para un almuerzo ligero.</p>
+                    <button class="boton-receta">Ver receta</button> 
+                </article>
+            
+                <article class="receta"> 
+                    <picture>
+                        <!--Formato WEBP-->
+                        <source srcset="../media/img/recetas_categoria_33_480x320.webp" type="image/webp" media="(max-width: 479px)">
+                        <source srcset="../media/img/recetas_categoria_33_768x512.webp" type="image/webp" media="(min-width: 480px) and (max-width: 767px)">
+                        <source srcset="../media/img/recetas_categoria_33_1200x800.webp" type="image/webp" media="(min-width: 768px) and (max-width: 1199px)">
+                        <source srcset="../media/img/recetas_categoria_33_1280x853.webp" type="image/webp" media="(min-width: 1200px) and (max-width: 1279px)">
+                        <source srcset="../media/img/recetas_categoria_33_1920x1280.webp" type="image/webp" media="(min-width: 1280px) and (max-width: 1919px)">
+                        <source srcset="../media/img/recetas_categoria_33_2560x1706.webp" type="image/webp" media="(min-width: 1920px)">
+                        
+                        <!--Formato PNG-->
+                        <source srcset="../media/img/recetas_categoria_33_480x320.png" type="image/png" media="(max-width: 479px)">
+                        <source srcset="../media/img/recetas_categoria_33_768x512.png" type="image/png" media="(min-width: 480px) and (max-width: 767px)">
+                        <source srcset="../media/img/recetas_categoria_33_1200x800.png" type="image/png" media="(min-width: 768px) and (max-width: 1199px)">
+                        <source srcset="../media/img/recetas_categoria_33_1280x853.png" type="image/png" media="(min-width: 1200px) and (max-width: 1279px)">
+                        <source srcset="../media/img/recetas_categoria_33_1920x1280.png" type="image/png" media="(min-width: 1280px) and (max-width: 1919px)">
+                        <source srcset="../media/img/recetas_categoria_33_2560x1706.png" type="image/png" media="(min-width: 1920px)">
+                        
+                        <!--Formato JPG-->
+                        <source srcset="../media/img/recetas_categoria_33_480x320.jpg" type="image/jpeg" media="(max-width: 479px)">
+                        <source srcset="../media/img/recetas_categoria_33_768x512.jpg" type="image/jpeg" media="(min-width: 480px) and (max-width: 767px)">
+                        <source srcset="../media/img/recetas_categoria_33_1200x800.jpg" type="image/jpeg" media="(min-width: 768px) and (max-width: 1199px)">
+                        <source srcset="../media/img/recetas_categoria_33_1280x853.jpg" type="image/jpeg" media="(min-width: 1200px) and (max-width: 1279px)">
+                        <source srcset="../media/img/recetas_categoria_33_1920x1280.jpg" type="image/jpeg" media="(min-width: 1280px) and (max-width: 1919px)">
+                        <source srcset="../media/img/recetas_categoria_33_2560x1706.jpg" type="image/jpeg" media="(min-width: 1920px)">
+                        
+                        <!--Imagen por defecto (para navegadores antiguos)-->
+                        <img src="../media/img/recetas_categoria_33_480x320.webp" alt="Receta categoría sin gluten 3">
+                    </picture>
+                    <h2>Sorbete de manzana</h2>
+                    <p>Un postre refrescante y natural, perfecto para el verano.</p>
+                    <button class="boton-receta">Ver receta</button> 
+                </article>
+            </section>
+        </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <aside>
+            <ul>
+                <li><a href="#">Contacto</a></li>
+                <li>Navegación
+                <ul class="nav-links">
+                    <li><a href="#">Recetas</a></li>
+                    <li><a href="#">Foro</a></li>
+                    <li><a href="#">Sobre mí</a></li>
+                    <li><a href="#">Cuenta</a></li>
+                </ul>
+                </li>
+                <li>Redes Sociales
+                <ul class="social-links">
+                    <li><a href="#" target="_blank">Facebook</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                    <li><a href="#" target="_blank">TikTok</a></li>
+                    <li><a href="#" target="_blank">YouTube</a></li>
+                </ul>
+                </li>
+                <li><a href="#">Aviso Legal</a></li>
+            </ul>
+            <p>&copy;2025 CocinaConMarta. Todos los derechos reservados. Diseño Web por Laura NC</p>
+        </aside>
+    </footer>
+</body>
+
+</html>
