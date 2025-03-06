@@ -1,0 +1,100 @@
+@use "../global/variables.scss" as v; // Importa las variables y les asigna el alias "v"
+
+body {
+    background-color: v.$color-fondo-sobreMi; // Color de fondo del cuerpo
+    color: v.$color-texto; // Color de texto principal
+    font-family: v.$fuente-principal; // Fuente de texto principal
+    margin: 0; // Elimina los márgenes predeterminados
+    padding: 0; // Elimina el relleno predeterminado
+}
+
+.sobre-mi-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    .sobre-mi-texto-principal {
+        background-color: v.$color-fondo-texto-principal;
+        border: 1px solid v.$color-borde-texto-principal;
+        padding: 20px;
+        font-family: v.$fuente-principal;
+        font-size: 1em;
+        text-align: left;
+        width: 100%;
+        max-width: 1200px; /* Ajusta según sea necesario */
+        margin-bottom: 20px;
+    }
+
+    .sobre-mi-contenido-inferior {
+        display: flex;
+        width: 100%;
+        max-width: 1200px; /* Ajusta según sea necesario */
+
+        .sobre-mi-imagen {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            // Evitar carga innecesaria de imágenes en Firefox
+            @supports (-moz-appearance: none) {
+                img {
+                    max-width: 100%; // Limita el tamaño según el contenedor
+                    width: auto; // Permite que Firefox elija la imagen óptima
+                }
+            }
+        }
+
+        .sobre-mi-texto-comunidad {
+            background-color: v.$color-fondo-texto-comunidad;
+            padding: 20px;
+            font-family: v.$fuente-principal;
+            font-size: 1em;
+            text-align: left;
+            flex: 1;
+            margin-left: 20px; /* Espacio entre imagen y texto */
+
+
+            .unirse {
+                background-color: v.$color-boton; // Color de fondo del botón
+                border: 2px solid v.$color-borde-boton; // Borde del botón
+                font-family: v.$fuente-decorativa; // Fuente de texto decorativa
+                font-weight: 400; // Texto normal
+                padding: 8px 15px; // Relleno interno
+                border-radius: 8px; // Bordes redondeados
+                cursor: pointer; // Cursor de puntero al pasar por encima
+                color: v.$color-texto; // Color de texto
+                display: block; /* Muestra el botón como un bloque */
+                margin: 0 auto; /* Centra el botón horizontalmente */
+            
+                &:hover { // Estilos al pasar el ratón por encima
+                    background-color: v.$color-borde-boton; // Cambia el color de fondo
+                }
+            }
+        
+        }
+    }
+
+    /* Media query para pantallas pequeñas (móviles) */
+    @media (max-width: 768px) {
+        .sobre-mi-contenido-inferior {
+            flex-direction: column; /* Apila los elementos verticalmente */
+            align-items: center; /* Centra los elementos horizontalmente */
+        }
+
+        .sobre-mi-imagen {
+            margin: 20px 0; /* Agrega margen arriba y abajo de la imagen */
+        }
+
+        .sobre-mi-texto-comunidad {
+            margin-left: 0; /* Elimina el margen izquierdo del texto */
+        }
+    }
+}
+

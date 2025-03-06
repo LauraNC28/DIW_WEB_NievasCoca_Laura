@@ -1,0 +1,108 @@
+@use "../global/variables.scss" as v; // Importa las variables y les asigna el alias "v"
+
+body {
+    background-color: v.$color-fondo-foro; // Color de fondo del cuerpo
+    color: v.$color-texto; // Color de texto principal
+    font-family: v.$fuente-principal; // Fuente de texto principal
+    margin: 0; // Elimina los márgenes predeterminados
+    padding: 0; // Elimina el relleno predeterminado
+}
+
+/* Estilos para el menú horizontal */
+.foro-menu-horizontal {
+    background-color: v.$color-fondo-menu-foro; /* Color de fondo del menú */
+    border: 1px solid v.$color-borde-menu-foro; /* Color del borde del menú */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px; /* Agrega margen superior */
+    margin-bottom: 20px; /* Agrega margen inferior */
+}
+
+.foro-menu-horizontal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block; /* Mostrar elementos en línea */
+}
+
+.foro-menu-horizontal li {
+    display: inline-block; /* Mostrar elementos en línea */
+    margin: 0 10px; /* Espaciado entre elementos */
+}
+
+.foro-menu-horizontal a {
+    text-decoration: none;
+    color: v.$color-texto;
+    font-family: v.$fuente-secundaria; /* Fuente Montserrat */
+    font-weight: 600; /* Semibold */
+    padding: 5px 10px; /* Espaciado interno del enlace */
+    border-radius: 3px; /* Bordes redondeados del enlace */
+}
+
+/* Estilos para la página del foro (ajustes para el menú vertical) */
+.foro-main {
+    display: flex;
+    padding: 20px;
+}
+
+.foro-temas {
+    flex: 1; /* Permite que la sección de temas ocupe el espacio restante */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.tema {
+    background-color: v.$color-fondo-temas; /* Color de fondo de los temas */
+    border: 1px solid;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tema h2 {
+    margin-top: 0;
+    font-family: v.$fuente-secundaria; /* Fuente Montserrat */
+    font-weight: 700; /* Bold */
+}
+
+.tema p {
+    margin-bottom: 15px;
+    background-color: v.$color-fondo-descripcion; /* Color de fondo de la descripción */
+    font-family: v.$fuente-principal; /* Fuente Open Sans */
+}
+
+.unirse, .crear-nuevo {
+    background-color: v.$color-boton; // Color de fondo del botón
+    border: 2px solid v.$color-borde-boton; // Borde del botón
+    font-family: v.$fuente-decorativa; // Fuente de texto decorativa
+    font-weight: 400; // Texto normal
+    padding: 15px 30px; // Relleno interno
+    border-radius: 8px; // Bordes redondeados
+    margin: 20px auto 0;
+    cursor: pointer; // Cursor de puntero al pasar por encima
+    color: v.$color-texto; // Color de texto
+
+    &:hover { // Estilos al pasar el ratón por encima
+        background-color: v.$color-borde-boton; // Cambia el color de fondo
+    }
+}
+
+.unirse {
+    align-self: flex-end;
+}
+
+.crear-nuevo {
+    display: block;
+    margin: 20px auto;
+}
+
+@media (min-width: 768px) {
+    .foro-temas {
+        grid-template-columns: 1fr 1fr;
+    }
+}

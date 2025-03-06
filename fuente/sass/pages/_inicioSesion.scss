@@ -1,0 +1,103 @@
+@use "../global/variables.scss" as v; // Importa las variables y les asigna el alias "v"
+
+body {
+    background-color: v.$color-fondo-cuenta; // Color de fondo del cuerpo
+    color: v.$color-texto; // Color de texto principal
+    font-family: v.$fuente-principal; // Fuente de texto principal
+    margin: 0; // Elimina los márgenes predeterminados
+    padding: 0; // Elimina el relleno predeterminado
+}
+
+.inicio-sesion-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    .inicio-sesion-form {
+        border: 1px solid v.$color-borde-form;
+        padding: 20px;
+        font-family: v.$fuente-secundaria;
+        font-weight: 700;
+        width: 100%;
+        max-width: 300px; /* Ajusta según sea necesario */
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                margin-bottom: 5px;
+            }
+
+            input {
+                border: 2px solid v.$color-borde-form;
+                padding: 12px;
+                margin-bottom: 10px;
+            }
+
+            button {
+                background-color: v.$color-boton;
+                border: 2px solid v.$color-borde-boton;
+                font-family: v.$fuente-decorativa;
+                font-weight: 400;
+                width: 200px;
+                padding: 8px 15px;
+                border-radius: 8px;
+                cursor: pointer;
+                color: v.$color-texto;
+                display: block;
+                margin: 10px auto 0;
+
+                &:hover {
+                    background-color: v.$color-borde-boton;
+                }
+            }
+
+            .olvidaste-password {
+                text-align: center;
+                margin-top: 10px;
+                font-family: v.$fuente-secundaria;
+                color: v.$color-texto;
+                font-size: 0.7em;
+            }
+        }
+    }
+
+    .suscribirse {
+        background-color: v.$color-fondo-suscribete;
+        padding: 10px;
+        font-family: v.$fuente-secundaria;
+        font-weight: 400;
+        width: 100%;
+        max-width: 300px; /* Ajusta según sea necesario */
+        text-align: center;
+        margin-bottom: 40px;
+
+        .enlace-registrarse {
+            text-align: center;
+            margin-top: 10px;
+            font-family: v.$fuente-secundaria;
+            color: v.$color-texto;
+            font-size: 0.9em;
+        }
+    }
+}
+
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .inicio-sesion-main {
+        .inicio-sesion-form {
+            form {
+                button {
+                    width: auto; /* El botón se ajusta al contenido en móviles */
+                    min-width: 120px; /* Ancho mínimo para el botón */
+                    padding: 10px 20px; /* Ajusta el padding para que no sea tan grande */
+                }
+            }
+        }
+    }
+}

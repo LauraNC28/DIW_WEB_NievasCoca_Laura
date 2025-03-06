@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página del Foro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Montserrat:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <picture>
+            <!--Formato WEBP-->
+            <source srcset="../media/img/logo_blog_200x200.webp" type="image/webp" media="(min-width:200px)">
+
+            <!--Formato PNG-->
+            <source srcset="../media/img/logo_blog_200x200.png" type="image/png" media="(min-width:200px)">
+
+            <!--Formato JPG-->
+            <source srcset="../media/img/logo_blog_200x200.jpg" type="image/jpeg" media="(min-width:200px)">
+
+            <!--Imagen por defecto (para navegadores antiguos)-->
+            <img src="../media/img/logo_blog_200x200.png" alt="Imagen del logo del blog" class="logo-image">
+        </picture>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../html/recetas.html">Recetas</a></li>
+                <li><a href="../html/foro.html">Foro</a></li>
+                <li><a href="../html/sobreMi.html">Sobre Mí</a></li>
+                <li><a href="../html/contacto.html">Contacto</a></li>
+                <li><a href="../html/inicioSesion.html">Cuenta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="foro-main">
+        <aside class="foro-menu-horizontal">
+            <ul>
+                <li><a href="#">Técnicas de Recetas</a></li>
+                <li><a href="#">Recetas</a></li>
+                <li><a href="#">Consejos y Trucos</a></li>
+                <li><a href="#">Dietas</a></li>
+                <li><a href="#">Utensilios de Cocina</a></li>
+                <li><a href="#">Ingredientes de Temporada</a></li>
+            </ul>
+        </aside>
+
+        <section class="foro-temas">
+            <article class="tema">
+                <h2>Panadería y Repostería</h2>
+                <p>Comparte tus mejores recetas de panes, pasteles y postres, o resuelve 
+                    dudas sobre horneado, decoración y más.</p>
+                <button class="unirse">Unirse</button>
+            </article>
+
+            <article class="tema">
+                <h2>Cocina Internacional</h2>
+                <p>Un espacio para explorar recetas y técnicas de diferentes culturas 
+                    alrededor del mundo, desde sushi japonés hasta tacos mexicanos.</p>
+                <button class="unirse">Unirse</button>
+            </article>
+
+            <article class="tema">
+                <h2>Sustituciones e Intolerancias</h2>
+                <p>Pregunta y comparte alternativas para ingredientes en recetas, ideal para 
+                    personas con alergias, intolerancias o preferencias alimenticias.</p>
+                <button class="unirse">Unirse</button>
+            </article>
+
+            <article class="tema">
+                <h2>Eventos y Reuniones Gastronómicas</h2>
+                <p>Organiza o participa en eventos culinarios, desde cenas temáticas hasta 
+                    intercambios de recetas y retos de cocina.</p>
+                <button class="unirse">Unirse</button>
+            </article>
+
+            <article class="tema">
+                <h2>Alimentación Saludable y Bienestar</h2>
+                <p>Discute sobre hábitos alimenticios saludables, recetas equilibradas y 
+                    cómo mantener una relación positiva con la comida.</p>
+                <button class="unirse">Unirse</button>
+            </article>
+        </section>
+
+        <button class="crear-nuevo">Crear nuevo</button>
+    </main>
+
+    <footer class="footer">
+        <aside>
+            <ul>
+                <li><a href="../html/contacto.html">Contacto</a></li>
+                <li>Navegación
+                <ul class="nav-links">
+                    <li><a href="../html/inicio.html">Inicio</a></li>
+                    <li><a href="../html/recetas.html">Recetas</a></li>
+                    <li><a href="../html/foro.html">Foro</a></li>
+                    <li><a href="../html/sobreMi.html">Sobre Mí</a></li>
+                    <li><a href="../html/inicioSesion.html">Cuenta</a></li>
+                </ul>
+                </li>
+                <li>Redes Sociales
+                <ul class="social-links">
+                    <li><a href="#" target="_blank">Facebook</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                    <li><a href="#" target="_blank">TikTok</a></li>
+                    <li><a href="#" target="_blank">YouTube</a></li>
+                </ul>
+                </li>
+                <li><a href="#">Aviso Legal</a></li>
+            </ul>
+            <p>&copy;2025 CocinaConMarta. Todos los derechos reservados. Diseño Web por Laura NC</p>
+        </aside>
+    </footer>
+</body>
+
+</html>

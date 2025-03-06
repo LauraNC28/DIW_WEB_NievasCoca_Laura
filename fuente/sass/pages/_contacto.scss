@@ -1,0 +1,123 @@
+@use "../global/variables.scss" as v; // Importa las variables y les asigna el alias "v"
+
+body {
+    background-color: v.$color-fondo-contacto; // Color de fondo del cuerpo
+    color: v.$color-texto; // Color de texto principal
+    font-family: v.$fuente-principal; // Fuente de texto principal
+    margin: 0; // Elimina los márgenes predeterminados
+    padding: 0; // Elimina el relleno predeterminado
+}
+
+.contacto-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    .contacto-form {
+        border: 1px solid v.$color-borde-form; // Borde del formulario
+        padding: 20px;
+        font-family: v.$fuente-secundaria; // Fuente Montserrat para el formulario
+        font-weight: 700; // Negrita para el formulario
+        width: 100%;
+        max-width: 400px; 
+        margin-bottom: 20px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                margin-bottom: 5px;
+            }
+
+            input, textarea {
+                border: 2px solid v.$color-borde-form; // Borde de los campos del formulario
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
+            button {
+                background-color: v.$color-boton; // Color de fondo del botón
+                border: 2px solid v.$color-borde-boton; // Borde del botón
+                font-family: v.$fuente-decorativa; // Fuente de texto decorativa
+                font-weight: 400; // Texto normal
+                padding: 15px 30px; // Relleno interno
+                border-radius: 8px; // Bordes redondeados
+                margin: 20px auto 0;
+                width: 300px;
+                cursor: pointer; // Cursor de puntero al pasar por encima
+                color: v.$color-texto; // Color de texto
+
+                &:hover { // Estilos al pasar el ratón por encima
+                    background-color: v.$color-borde-boton; // Cambia el color de fondo
+                }
+            }
+        }
+    }
+
+    .contacto-info {
+        background-color: v.$color-fondo-contacto-info; // Fondo de la sección de información
+        padding: 20px;
+        font-family: v.$fuente-principal; // Fuente Open Sans para la información de contacto
+        font-weight: 400; // Regular para la información de contacto
+        width: 100%;
+        max-width: 400px; 
+        display: flex; /* Agregamos flexbox */
+        flex-direction: column; /* Alineamos los elementos en columna */
+        align-items: center; /* Centramos horizontalmente los elementos */
+        margin-top: 30px; /* Añade margen superior */
+        margin-bottom: 30px; /* Añade margen inferior */
+
+        article {
+            margin-bottom: 10px;
+        }
+
+        .contacto-sigueme {
+            font-family: v.$fuente-secundaria; // Fuente Montserrat para "Sígueme"
+            font-weight: 600; // Semibold para "Sígueme"
+        }
+
+        .contacto-redes {
+            display: flex; /* Usamos flexbox para alinear los elementos */
+            align-items: center; /* Centramos verticalmente los elementos */
+            text-align: left; /* Alineamos el texto a la izquierda */
+        }
+    
+        strong {
+            margin-right: 10px; /* Agregamos un margen derecho para separar la palabra de los iconos */
+            align-self: center; /* Alinea verticalmente la palabra "Redes:" */
+        }
+    
+        .social-icons {
+            display: flex; /* Usamos flexbox para centrar los iconos */
+            align-items: center; /* Centramos horizontalmente los iconos */
+        }
+    
+        .social-icons a {
+            margin: 0 7px;
+        }
+    
+        .social-icons i {
+            font-size: 1.5em;
+            color: v.$color-iconos;
+            align-self: center; /* Alinea verticalmente los iconos */
+        }
+    }
+}
+
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .contacto-main {
+        .contacto-form {
+            form {
+                button {
+                    width: auto; /* El botón se ajusta al contenido en móviles */
+                    min-width: 150px; /* Ancho mínimo para el botón */
+                    padding: 15px 30px; /* Ajusta el padding para que no sea tan grande */
+                }
+            }
+        }
+    }
+}

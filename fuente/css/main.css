@@ -346,7 +346,7 @@ body {
   }
 }
 body {
-  background-color: #FFE8E8;
+  background-color: #FFFFFF;
   color: #333333;
   font-family: "Open Sans", sans-serif;
   margin: 0;
@@ -363,7 +363,7 @@ main .search-box {
   display: flex;
   align-items: center;
   margin: 2rem auto;
-  border: 1px solid #333333;
+  border: 2px solid #333333;
   background-color: #FFFFFF;
   border-radius: 4px;
   padding: 0.3rem 0.5rem;
@@ -393,7 +393,7 @@ main .contenedor-principal .menu-categorias {
 }
 main .contenedor-principal .menu-categorias .categorias {
   background-color: #FFE8E8;
-  border: 1px solid #E0BBB0;
+  border: 1px solid #FFE8E8;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -415,8 +415,8 @@ main .contenedor-principal .menu-categorias .categorias ul li {
   padding: 0.5rem 1rem;
   border-bottom: 1px solid #E0BBB0;
 }
-main .contenedor-principal .menu-categorias .categorias ul li span {
-  background-color: #FFDFDF;
+main .contenedor-principal .menu-categorias .categorias ul li strong {
+  background-color: #FFC2A1;
   color: #333333;
   width: 2rem;
   height: 2rem;
@@ -447,6 +447,9 @@ main .recetas {
   font-weight: bold;
   padding: 10px;
   border-radius: 8px;
+}
+main .recetas h1 {
+  font-size: 2em;
 }
 main .recetas-grid {
   display: flex;
@@ -538,7 +541,7 @@ main .boton-receta:hover {
     border: 1px solid #E0BBB0;
     border-radius: 4px;
     text-decoration: none;
-    color: #333333; /* Color de texto #333333 */
+    color: #333333; /* Color de texto*/
     background-color: #FFDFDF;
     font-weight: 400; /* Peso de fuente regular */
     font-family: "Open Sans", sans-serif; /* Fuente Open Sans Regular */
@@ -554,6 +557,441 @@ main .boton-receta:hover {
   .search-box {
     width: 300px;
     margin: 0 auto;
+  }
+}
+body {
+  background-color: #FFFFFF;
+  color: #333333;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para el menú horizontal */
+.foro-menu-horizontal {
+  background-color: #FFD3C2; /* Color de fondo del menú */
+  border: 1px solid #E0BBB0; /* Color del borde del menú */
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10px; /* Agrega margen superior */
+  margin-bottom: 20px; /* Agrega margen inferior */
+}
+
+.foro-menu-horizontal ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block; /* Mostrar elementos en línea */
+}
+
+.foro-menu-horizontal li {
+  display: inline-block; /* Mostrar elementos en línea */
+  margin: 0 10px; /* Espaciado entre elementos */
+}
+
+.foro-menu-horizontal a {
+  text-decoration: none;
+  color: #333333;
+  font-family: "Montserrat", sans-serif; /* Fuente Montserrat */
+  font-weight: 600; /* Semibold */
+  padding: 5px 10px; /* Espaciado interno del enlace */
+  border-radius: 3px; /* Bordes redondeados del enlace */
+}
+
+/* Estilos para la página del foro (ajustes para el menú vertical) */
+.foro-main {
+  display: flex;
+  padding: 20px;
+}
+
+.foro-temas {
+  flex: 1; /* Permite que la sección de temas ocupe el espacio restante */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.tema {
+  background-color: #FFDFDF; /* Color de fondo de los temas */
+  border: 1px solid;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tema h2 {
+  margin-top: 0;
+  font-family: "Montserrat", sans-serif; /* Fuente Montserrat */
+  font-weight: 700; /* Bold */
+}
+
+.tema p {
+  margin-bottom: 15px;
+  background-color: #F6F6F6; /* Color de fondo de la descripción */
+  font-family: "Open Sans", sans-serif; /* Fuente Open Sans */
+}
+
+.unirse, .crear-nuevo {
+  background-color: #FFD3C2;
+  border: 2px solid #FFC2A1;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  padding: 15px 30px;
+  border-radius: 8px;
+  margin: 20px auto 0;
+  cursor: pointer;
+  color: #333333;
+}
+.unirse:hover, .crear-nuevo:hover {
+  background-color: #FFC2A1;
+}
+
+.unirse {
+  align-self: flex-end;
+}
+
+.crear-nuevo {
+  display: block;
+  margin: 20px auto;
+}
+
+@media (min-width: 768px) {
+  .foro-temas {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+body {
+  background-color: #FFFFFF;
+  color: #333333;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.sobre-mi-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  /* Media query para pantallas pequeñas (móviles) */
+}
+.sobre-mi-main .sobre-mi-texto-principal {
+  background-color: #FFFFFF;
+  border: 1px solid #E0BBB0;
+  padding: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  text-align: left;
+  width: 100%;
+  max-width: 1200px; /* Ajusta según sea necesario */
+  margin-bottom: 20px;
+}
+.sobre-mi-main .sobre-mi-contenido-inferior {
+  display: flex;
+  width: 100%;
+  max-width: 1200px; /* Ajusta según sea necesario */
+}
+.sobre-mi-main .sobre-mi-contenido-inferior .sobre-mi-imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sobre-mi-main .sobre-mi-contenido-inferior .sobre-mi-imagen img {
+  max-width: 100%;
+  height: auto;
+}
+@supports (-moz-appearance: none) {
+  .sobre-mi-main .sobre-mi-contenido-inferior .sobre-mi-imagen img {
+    max-width: 100%;
+    width: auto;
+  }
+}
+.sobre-mi-main .sobre-mi-contenido-inferior .sobre-mi-texto-comunidad {
+  background-color: #F6F6F6;
+  padding: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  text-align: left;
+  flex: 1;
+  margin-left: 20px; /* Espacio entre imagen y texto */
+}
+.sobre-mi-main .sobre-mi-contenido-inferior .sobre-mi-texto-comunidad .unirse {
+  background-color: #FFD3C2;
+  border: 2px solid #FFC2A1;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #333333;
+  display: block; /* Muestra el botón como un bloque */
+  margin: 0 auto; /* Centra el botón horizontalmente */
+}
+.sobre-mi-main .sobre-mi-contenido-inferior .sobre-mi-texto-comunidad .unirse:hover {
+  background-color: #FFC2A1;
+}
+@media (max-width: 768px) {
+  .sobre-mi-main .sobre-mi-contenido-inferior {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+  }
+  .sobre-mi-main .sobre-mi-imagen {
+    margin: 20px 0; /* Agrega margen arriba y abajo de la imagen */
+  }
+  .sobre-mi-main .sobre-mi-texto-comunidad {
+    margin-left: 0; /* Elimina el margen izquierdo del texto */
+  }
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #333333;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.contacto-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.contacto-main .contacto-form {
+  border: 1px solid #E0BBB0;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+.contacto-main .contacto-form form {
+  display: flex;
+  flex-direction: column;
+}
+.contacto-main .contacto-form form label {
+  margin-bottom: 5px;
+}
+.contacto-main .contacto-form form input, .contacto-main .contacto-form form textarea {
+  border: 2px solid #E0BBB0;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.contacto-main .contacto-form form button {
+  background-color: #FFD3C2;
+  border: 2px solid #FFC2A1;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  padding: 15px 30px;
+  border-radius: 8px;
+  margin: 20px auto 0;
+  width: 300px;
+  cursor: pointer;
+  color: #333333;
+}
+.contacto-main .contacto-form form button:hover {
+  background-color: #FFC2A1;
+}
+.contacto-main .contacto-info {
+  background-color: #FFE8E8;
+  padding: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  width: 100%;
+  max-width: 400px;
+  display: flex; /* Agregamos flexbox */
+  flex-direction: column; /* Alineamos los elementos en columna */
+  align-items: center; /* Centramos horizontalmente los elementos */
+  margin-top: 30px; /* Añade margen superior */
+  margin-bottom: 30px; /* Añade margen inferior */
+}
+.contacto-main .contacto-info article {
+  margin-bottom: 10px;
+}
+.contacto-main .contacto-info .contacto-sigueme {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.contacto-main .contacto-info .contacto-redes {
+  display: flex; /* Usamos flexbox para alinear los elementos */
+  align-items: center; /* Centramos verticalmente los elementos */
+  text-align: left; /* Alineamos el texto a la izquierda */
+}
+.contacto-main .contacto-info strong {
+  margin-right: 10px; /* Agregamos un margen derecho para separar la palabra de los iconos */
+  align-self: center; /* Alinea verticalmente la palabra "Redes:" */
+}
+.contacto-main .contacto-info .social-icons {
+  display: flex; /* Usamos flexbox para centrar los iconos */
+  align-items: center; /* Centramos horizontalmente los iconos */
+}
+.contacto-main .contacto-info .social-icons a {
+  margin: 0 7px;
+}
+.contacto-main .contacto-info .social-icons i {
+  font-size: 1.5em;
+  color: #333333;
+  align-self: center; /* Alinea verticalmente los iconos */
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .contacto-main .contacto-form form button {
+    width: auto; /* El botón se ajusta al contenido en móviles */
+    min-width: 150px; /* Ancho mínimo para el botón */
+    padding: 15px 30px; /* Ajusta el padding para que no sea tan grande */
+  }
+}
+body {
+  background-color: #FFFFFF;
+  color: #333333;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.inicio-sesion-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.inicio-sesion-main .inicio-sesion-form {
+  border: 1px solid #E0BBB0;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  width: 100%;
+  max-width: 300px; /* Ajusta según sea necesario */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.inicio-sesion-main .inicio-sesion-form form {
+  display: flex;
+  flex-direction: column;
+}
+.inicio-sesion-main .inicio-sesion-form form label {
+  margin-bottom: 5px;
+}
+.inicio-sesion-main .inicio-sesion-form form input {
+  border: 2px solid #E0BBB0;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+.inicio-sesion-main .inicio-sesion-form form button {
+  background-color: #FFD3C2;
+  border: 2px solid #FFC2A1;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  width: 200px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #333333;
+  display: block;
+  margin: 10px auto 0;
+}
+.inicio-sesion-main .inicio-sesion-form form button:hover {
+  background-color: #FFC2A1;
+}
+.inicio-sesion-main .inicio-sesion-form form .olvidaste-password {
+  text-align: center;
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  color: #333333;
+  font-size: 0.7em;
+}
+.inicio-sesion-main .suscribirse {
+  background-color: #FFE8E8;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  width: 100%;
+  max-width: 300px; /* Ajusta según sea necesario */
+  text-align: center;
+  margin-bottom: 40px;
+}
+.inicio-sesion-main .suscribirse .enlace-registrarse {
+  text-align: center;
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  color: #333333;
+  font-size: 0.9em;
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .inicio-sesion-main .inicio-sesion-form form button {
+    width: auto; /* El botón se ajusta al contenido en móviles */
+    min-width: 120px; /* Ancho mínimo para el botón */
+    padding: 10px 20px; /* Ajusta el padding para que no sea tan grande */
+  }
+}
+body {
+  background-color: #FFFFFF;
+  color: #333333;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.crear-cuenta-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.crear-cuenta-main .crear-cuenta-form {
+  border: 1px solid #E0BBB0;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  width: 100%;
+  max-width: 300px; /* Ajusta según sea necesario */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.crear-cuenta-main .crear-cuenta-form form {
+  display: flex;
+  flex-direction: column;
+}
+.crear-cuenta-main .crear-cuenta-form form label {
+  margin-bottom: 5px;
+}
+.crear-cuenta-main .crear-cuenta-form form input {
+  border: 2px solid #E0BBB0;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.crear-cuenta-main .crear-cuenta-form form button {
+  background-color: #FFD3C2;
+  border: 2px solid #FFC2A1;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  width: 200px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #333333;
+  display: block;
+  margin: 10px auto 0; /* Margen superior ajustado */
+}
+.crear-cuenta-main .crear-cuenta-form form button:hover {
+  background-color: #FFC2A1;
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .crear-cuenta-main .crear-cuenta-form form button {
+    width: auto;
+    min-width: 120px;
+    padding: 10px 20px;
   }
 }
 

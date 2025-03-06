@@ -1,0 +1,75 @@
+@use "../global/variables.scss" as v; // Importa las variables y les asigna el alias "v"
+
+body {
+    background-color: v.$color-fondo-cuenta; // Color de fondo del cuerpo
+    color: v.$color-texto; // Color de texto principal
+    font-family: v.$fuente-principal; // Fuente de texto principal
+    margin: 0; // Elimina los márgenes predeterminados
+    padding: 0; // Elimina el relleno predeterminado
+}
+
+.crear-cuenta-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    .crear-cuenta-form {
+        border: 1px solid v.$color-borde-form;
+        padding: 20px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        width: 100%;
+        max-width: 300px; /* Ajusta según sea necesario */
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                margin-bottom: 5px;
+            }
+
+            input {
+                border: 2px solid v.$color-borde-form;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
+            button {
+                background-color: v.$color-boton;
+                border: 2px solid v.$color-borde-boton;
+                font-family: v.$fuente-decorativa;
+                font-weight: 400;
+                width: 200px;
+                padding: 8px 15px;
+                border-radius: 8px;
+                cursor: pointer;
+                color: v.$color-texto;
+                display: block;
+                margin: 10px auto 0; /* Margen superior ajustado */
+
+                &:hover {
+                    background-color: v.$color-borde-boton;
+                }
+            }
+        }
+    }
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .crear-cuenta-main {
+        .crear-cuenta-form {
+            form {
+                button {
+                    width: auto;
+                    min-width: 120px;
+                    padding: 10px 20px;
+                }
+            }
+        }
+    }
+}

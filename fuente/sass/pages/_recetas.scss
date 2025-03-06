@@ -3,7 +3,7 @@
 
 // Estilos generales para el cuerpo de la página
 body {
-    background-color: v.$color-fondo; // Color de fondo del cuerpo
+    background-color: v.$color-fondo-recetas; // Color de fondo del cuerpo
     color: v.$color-texto; // Color de texto principal
     font-family: v.$fuente-principal; // Fuente de texto principal
     margin: 0; // Elimina los márgenes predeterminados
@@ -20,7 +20,7 @@ main {
         display: flex;
         align-items: center;
         margin: 2rem auto;
-        border: 1px solid v.$color-borde-buscador;
+        border: 2px solid v.$color-borde-buscador;
         background-color: v.$color-fondo-buscador;
         border-radius: 4px;
         padding: 0.3rem 0.5rem;
@@ -50,7 +50,7 @@ main {
             margin-right: 2rem;
             .categorias {
                 background-color: v.$color-fondo;
-                border: 1px solid v.$color-borde-seccion;
+                border: 1px solid v.$color-borde-menu;
                 border-radius: 8px;
                 overflow: hidden;
                 h2 {
@@ -69,8 +69,8 @@ main {
                         align-items: center;
                         padding: 0.5rem 1rem;
                         border-bottom: 1px solid v.$color-borde-seccion;
-                        span {
-                            background-color: v.$color-fondo-categorias;
+                        strong {
+                            background-color: v.$color-fondo-menu;
                             color: v.$color-texto;
                             width: 2rem;
                             height: 2rem;
@@ -107,6 +107,10 @@ main {
         font-weight: bold; // Texto en negrita
         padding: 10px; // Relleno interno
         border-radius: 8px; // Bordes redondeados
+        
+        h1 {
+            font-size: 2em; // Usa la variable para el tamaño de fuente
+        }
     }
 
     // Estilos para la cuadrícula de recetas
@@ -244,10 +248,10 @@ main {
         border: 1px solid v.$color-borde-seccion;
         border-radius: 4px;
         text-decoration: none;
-        color: #333333; /* Color de texto #333333 */
+        color: v.$color-texto; /* Color de texto*/
         background-color: v.$color-fondo-categorias;
         font-weight: 400; /* Peso de fuente regular */
-        font-family: 'Open Sans', sans-serif; /* Fuente Open Sans Regular */
+        font-family: v.$fuente-principal; /* Fuente Open Sans Regular */
     }
 
     

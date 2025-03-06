@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Contacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Montserrat:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    
+</head>
+
+<body>
+    <header class="header">
+        <picture>
+            <!--Formato WEBP-->
+            <source srcset="../media/img/logo_blog_200x200.webp" type="image/webp" media="(min-width:200px)">
+
+            <!--Formato PNG-->
+            <source srcset="../media/img/logo_blog_200x200.png" type="image/png" media="(min-width:200px)">
+
+            <!--Formato JPG-->
+            <source srcset="../media/img/logo_blog_200x200.jpg" type="image/jpeg" media="(min-width:200px)">
+
+            <!--Imagen por defecto (para navegadores antiguos)-->
+            <img src="../media/img/logo_blog_200x200.png" alt="Imagen del logo del blog" class="logo-image">
+        </picture>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../html/recetas.html">Recetas</a></li>
+                <li><a href="../html/foro.html">Foro</a></li>
+                <li><a href="../html/sobreMi.html">Sobre Mí</a></li>
+                <li><a href="../html/contacto.html">Contacto</a></li>
+                <li><a href="../html/inicioSesion.html">Cuenta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contacto-main">
+        <section class="contacto-form">
+            <form>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje"></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+
+        <section class="contacto-info">
+            <article class="contacto-email">
+                <strong>Email:</strong> <a href="mailto:contacto@martaencocina.com">contacto@martaencocina.com</a>
+            </article>
+            <article class="contacto-redes">
+                <strong>Redes:</strong>
+                <section class="social-icons">
+                    <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </section>
+            </article>
+            <article class="contacto-sigueme">
+                ¡Sígueme!
+            </article>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <aside>
+            <ul>
+                <li><a href="../html/contacto.html">Contacto</a></li>
+                <li>Navegación
+                <ul class="nav-links">
+                    <li><a href="../html/inicio.html">Inicio</a></li>
+                    <li><a href="../html/recetas.html">Recetas</a></li>
+                    <li><a href="../html/foro.html">Foro</a></li>
+                    <li><a href="../html/sobreMi.html">Sobre Mí</a></li>
+                    <li><a href="../html/inicioSesion.html">Cuenta</a></li>
+                </ul>
+                </li>
+                <li>Redes Sociales
+                <ul class="social-links">
+                    <li><a href="#" target="_blank">Facebook</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                    <li><a href="#" target="_blank">TikTok</a></li>
+                    <li><a href="#" target="_blank">YouTube</a></li>
+                </ul>
+                </li>
+                <li><a href="#">Aviso Legal</a></li>
+            </ul>
+            <p>&copy;2025 CocinaConMarta. Todos los derechos reservados. Diseño Web por Laura NC</p>
+        </aside>
+    </footer>
+</body>
+
+</html>

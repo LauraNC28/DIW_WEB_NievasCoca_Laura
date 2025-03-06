@@ -12,3 +12,18 @@
 
 // Importa los estilos de la página de recetas
 @use "pages/recetas.scss";
+
+// Importa los estilos de la página del foro
+@use "pages/foro.scss";
+
+// Importa los estilos de la página de sobre mí
+@use "pages/sobreMi.scss";
+
+// Importa los estilos de la página de contacto
+@use "pages/contacto.scss";
+
+// Importa los estilos de la página de inicio de sesión
+@use "pages/inicioSesion.scss";
+
+// Importa los estilos de la página de crear cuenta
+@use "pages/crearCuenta.scss";
