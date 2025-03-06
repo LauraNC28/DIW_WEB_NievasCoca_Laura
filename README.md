@@ -14,6 +14,17 @@ Este proyecto consiste en la creación de una página web para un blog de cocina
 
 El objetivo principal de este proyecto es crear una plataforma en línea donde los usuarios puedan encontrar recetas de cocina, interactuar con otros amantes de la cocina y aprender sobre el mundo culinario.
 
+
+## Tecnologías Utilizadas
+
+* HTML5
+* SCSS
+* JavaScript (ES6+)
+* Parcel
+* Node.js
+* npm
+
+
 ## Estructura del Proyecto
 
 El proyecto está organizado de la siguiente manera:
@@ -57,3 +68,17 @@ Se recomienda utilizar Node.js y Parcel.
     ```bash
     npm install
     ```
+
+### Ejecución con Parcel
+
+1. Abre una terminal en la raíz del proyecto.
+2. Inicia el servidor de desarrollo con Parcel:
+
+   ```bash
+   npm start
+   ```
+
+Para generar la versión optimizada para producción, ejecuta:
+
+```bash
+npm run build
