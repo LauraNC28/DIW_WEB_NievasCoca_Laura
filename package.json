@@ -4,8 +4,14 @@
   "description": "Un blog de cocina con recetas deliciosas y consejos culinarios.",
   "author": "Laura Nievas Coca",
   "license": "ISC",
-  "keywords": ["cocina", "recetas", "blog"],
+  "keywords": [
+    "cocina",
+    "recetas",
+    "blog"
+  ],
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.6",
     "parcel": "^2.13.3",
     "sass": "^1.84.0"
   },
@@ -14,7 +20,9 @@
   },
   "scripts": {
     "compilar-sass": "sass fuente/sass:fuente/css --source-map",
-    "dev": "parcel index.html",
-    "build": "parcel build index.html"
-  }
+    "start": "parcel fuente/index.html",
+    "build": "parcel build fuente/index.html",
+    "debug:sass": "parcel index.html --open --source-maps"
+  },
+  "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead"
 }

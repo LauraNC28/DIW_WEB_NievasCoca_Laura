@@ -10,210 +10,238 @@ body {
     padding: 0; // Elimina el relleno predeterminado
 }
 
+/* Estilos para el elemento principal <main> */
 main {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    margin: 0 1rem;
+    display: flex; /* Usamos flexbox para el diseño */
+    flex-direction: column; /* Alineamos los elementos en columna */
+    padding: 2rem; /* Relleno interno del elemento main */
+    margin: 0 1rem; /* Márgenes laterales del elemento main */
     
+    /* Estilos para la caja de búsqueda */
     .search-box {
-        display: flex;
-        align-items: center;
-        margin: 2rem auto;
-        border: 2px solid v.$color-borde-buscador;
-        background-color: v.$color-fondo-buscador;
-        border-radius: 4px;
-        padding: 0.3rem 0.5rem;
-        margin-bottom: 2rem;
-        width: 600px;
-        max-width: 100%;
+        display: flex; /* Usamos flexbox para el diseño */
+        align-items: center; /* Alineamos los elementos verticalmente */
+        margin: 2rem auto; /* Márgenes superior e inferior y centrado automático */
+        border: 2px solid v.$color-borde-buscador; /* Borde de la caja de búsqueda */
+        background-color: v.$color-fondo-buscador; /* Color de fondo de la caja de búsqueda */
+        border-radius: 4px; /* Bordes redondeados */
+        padding: 0.3rem 0.5rem; /* Relleno interno */
+        margin-bottom: 2rem; /* Margen inferior */
+        width: 600px; /* Ancho fijo */
+        max-width: 100%; /* Ancho máximo del 100% del contenedor */
+        
+        /* Estilos para la imagen dentro de la caja de búsqueda */
         img {
-            width: 1rem;
-            height: 1rem;
-            margin-right: 0.4rem;
+            width: 1rem; /* Ancho de la imagen */
+            height: 1rem; /* Altura de la imagen */
+            margin-right: 0.4rem; /* Margen derecho */
         }
+        
+        /* Estilos para el campo de entrada dentro de la caja de búsqueda */
         input {
-            border: none;
-            outline: none;
-            flex: 1;
+            border: none; /* Sin borde */
+            outline: none; /* Sin contorno al enfocar */
+            flex: 1; /* Ocupa todo el espacio disponible */
         }
     }
 
+    /* Estilos para el menú de categorías móvil */
     .menu-categorias-movil {
-        display: none; // Ocultar el menú móvil en pantallas grandes
+        display: none; /* Ocultar el menú móvil en pantallas grandes */
     }
 
+    /* Estilos para el contenedor principal */
     .contenedor-principal {
-        display: flex;
+        display: flex; /* Usamos flexbox para el diseño */
+        
+        /* Estilos para el menú de categorías */
         .menu-categorias {
-            width: 250px;
-            margin-right: 2rem;
+            width: 250px; /* Ancho fijo */
+            margin-right: 2rem; /* Margen derecho */
+            
+            /* Estilos para la sección de categorías */
             .categorias {
-                background-color: v.$color-fondo;
-                border: 1px solid v.$color-borde-menu;
-                border-radius: 8px;
-                overflow: hidden;
+                background-color: v.$color-fondo; /* Color de fondo */
+                border: 1px solid v.$color-borde-menu; /* Borde */
+                border-radius: 8px; /* Bordes redondeados */
+                overflow: hidden; /* Oculta el contenido que se desborda */
+                
+                /* Estilos para el título de las categorías */
                 h2 {
-                    text-align: center;
-                    padding: 1rem 0;
-                    margin: 0;
-                    font-weight: 600;
-                    background-color: v.$color-fondo-categorias;
+                    text-align: center; /* Alineación del texto en el centro */
+                    padding: 1rem 0; /* Relleno interno */
+                    margin: 0; /* Sin márgenes */
+                    font-weight: 600; /* Semibold */
+                    background-color: v.$color-fondo-categorias; /* Color de fondo */
                 }
+                
+                /* Estilos para la lista de categorías */
                 ul {
-                    list-style: none;
-                    padding: 0;
-                    margin: 0;
+                    list-style: none; /* Elimina los puntos de la lista */
+                    padding: 0; /* Sin relleno interno */
+                    margin: 0; /* Sin márgenes */
+                    
+                    /* Estilos para los elementos de la lista de categorías */
                     li {
-                        display: flex;
-                        align-items: center;
-                        padding: 0.5rem 1rem;
-                        border-bottom: 1px solid v.$color-borde-seccion;
+                        display: flex; /* Usamos flexbox para el diseño */
+                        align-items: center; /* Alineamos los elementos verticalmente */
+                        padding: 0.5rem 1rem; /* Relleno interno */
+                        border-bottom: 1px solid v.$color-borde-seccion; /* Borde inferior */
+                        
+                        /* Estilos para el elemento <strong> dentro de la lista */
                         strong {
-                            background-color: v.$color-fondo-menu;
-                            color: v.$color-texto;
-                            width: 2rem;
-                            height: 2rem;
-                            border-radius: 50%;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            margin-right: 0.5rem;
-                            font-family: v.$fuente-principal;
-                            font-weight: 400;
+                            background-color: v.$color-fondo-menu; /* Color de fondo */
+                            color: v.$color-texto; /* Color del texto */
+                            width: 2rem; /* Ancho fijo */
+                            height: 2rem; /* Altura fija */
+                            border-radius: 50%; /* Borde redondeado para hacerlo circular */
+                            display: flex; /* Usamos flexbox para el diseño */
+                            justify-content: center; /* Alineamos el contenido horizontalmente */
+                            align-items: center; /* Alineamos el contenido verticalmente */
+                            margin-right: 0.5rem; /* Margen derecho */
+                            font-family: v.$fuente-principal; /* Fuente Open Sans */
+                            font-weight: 400; /* Regular */
                         }
+                        
+                        /* Estilos para los enlaces dentro de la lista */
                         a {
-                            text-decoration: none;
-                            color: v.$color-texto;
-                            font-family: v.$fuente-principal;
-                            font-weight: 600;
-                            flex: 1;
+                            text-decoration: none; /* Sin subrayado */
+                            color: v.$color-texto; /* Color del texto */
+                            font-family: v.$fuente-principal; /* Fuente Open Sans */
+                            font-weight: 600; /* Semibold */
+                            flex: 1; /* Ocupa todo el espacio disponible */
                         }
                     }
+                    
+                    /* Estilos para el último elemento de la lista */
                     li:last-child {
-                        border-bottom: none;
+                        border-bottom: none; /* Sin borde inferior */
                     }
                 }
             }
         }
     }
 
+    /* Estilos para la sección de recetas */
     .recetas {
-        text-align: center; // Centra el texto del título
-        margin: 20px 0; // Márgenes superior e inferior
-        background-color: v.$color-seccion-titulo; // Color de fondo del título
-        border: 2px solid v.$color-borde-seccion; // Borde del título
-        font-family: v.$fuente-secundaria; // Fuente de texto secundaria
-        font-weight: bold; // Texto en negrita
-        padding: 10px; // Relleno interno
-        border-radius: 8px; // Bordes redondeados
+        text-align: center; /* Alineación del texto en el centro */
+        margin: 20px 0; /* Márgenes superior e inferior */
+        background-color: v.$color-seccion-titulo; /* Color de fondo */
+        border: 2px solid v.$color-borde-seccion; /* Borde */
+        font-family: v.$fuente-secundaria; /* Fuente Montserrat */
+        font-weight: bold; /* Negrita */
+        padding: 10px; /* Relleno interno */
+        border-radius: 8px; /* Bordes redondeados */
         
+        /* Estilos para el título de las recetas */
         h1 {
-            font-size: 2em; // Usa la variable para el tamaño de fuente
+            font-size: 2em; /* Tamaño de la fuente */
         }
     }
 
-    // Estilos para la cuadrícula de recetas
+    /* Estilos para la cuadrícula de recetas */
     .recetas-grid {
-        display: flex; // Usa flexbox para el diseño de la cuadrícula
-        justify-content: center; // Centra las imágenes horizontalmente
-        gap: 20px; // Espacio entre las recetas
-        flex-wrap: wrap; // Permite que las recetas se ajusten a varias líneas
-        max-width: 100vw; // Ancho máximo del 100% del viewport
-        overflow: hidden; // Oculta el contenido que se desborda
+        display: flex; /* Usamos flexbox para el diseño */
+        justify-content: center; /* Alineamos los elementos horizontalmente */
+        gap: 20px; /* Espacio entre las recetas */
+        flex-wrap: wrap; /* Permite que las recetas se ajusten a varias líneas */
+        max-width: 100vw; /* Ancho máximo del 100% del viewport */
+        overflow: hidden; /* Oculta el contenido que se desborda */
 
-        // Utiliza la función para definir el número de columnas
-        $columns: f.grid-columns(1024px); // Ejemplo: Para un ancho de pantalla de 1024px
+        /* Variables para el número de columnas */
+        $columns: f.grid-columns(1024px); /* Ejemplo: Para un ancho de pantalla de 1024px */
 
+        /* Estilos para una columna */
         @if $columns == 1 {
-            // Estilos para una columna
             .receta {
                 max-width: 100%;
             }
-        } @else if $columns == 2 {
-            // Estilos para dos columnas
+        } 
+        /* Estilos para dos columnas */
+        @else if $columns == 2 {
             .receta {
-                max-width: 45%; // Ajusta el ancho para dos columnas
+                max-width: 45%; /* Ajusta el ancho para dos columnas */
             }
-        } @else {
-            // Estilos para tres columnas
+        } 
+        /* Estilos para tres columnas */
+        @else {
             .receta {
                 max-width: 30%;
             }
         }
 
-        // Opcional: Interpolación para clases dinámicas
+        /* Interpolación para clases dinámicas */
         @for $i from 1 through 3 {
             .columna-#{$i} {
-                // Estilos específicos para cada columna (si existen)
-                @if $i == 2 { // Ejemplo: estilos solo para la columna 2
+                /* Estilos específicos para cada columna (si existen) */
+                @if $i == 2 { /* Ejemplo: estilos solo para la columna 2 */
                     background-color: lightblue;
                 }
             }
         }
     }
 
-    // Estilos para las tarjetas de recetas
+    /* Estilos para las tarjetas de recetas */
     .receta {
-        background-color: v.$color-fondo-receta; // Color de fondo de la tarjeta
-        font-family: v.$fuente-secundaria; // Fuente de texto secundaria
-        font-weight: 600; // Texto en negrita
-        text-align: center; // Centra el texto de la receta
-        padding: 15px; // Relleno interno
-        border-radius: 10px; // Bordes redondeados
-        flex: 1; // Ocupa todo el espacio disponible
-        max-width: 30%; // Ancho máximo del 30% del contenedor
+        background-color: v.$color-fondo-receta; /* Color de fondo */
+        font-family: v.$fuente-secundaria; /* Fuente Montserrat */
+        font-weight: 600; /* Semibold */
+        text-align: center; /* Alineación del texto en el centro */
+        padding: 15px; /* Relleno interno */
+        border-radius: 10px; /* Bordes redondeados */
+        flex: 1; /* Ocupa todo el espacio disponible */
+        max-width: 30%; /* Ancho máximo del 30% del contenedor */
 
-        // Operador para calcular un tamaño dinámico (opcional)
+        /* Operador para calcular un tamaño dinámico (opcional) */
         $padding-extra: 10px;
         padding: 15px + $padding-extra; // Suma un valor extra al padding
     }
 
-    // Estilos para las imágenes dentro de las tarjetas de recetas
+    /* Estilos para las imágenes dentro de las tarjetas de recetas */
     .receta picture {
-        display: block; // Ocupa todo el ancho disponible
-        width: 100%; // Ancho del 100% de la tarjeta
-        height: auto; // Altura automática para mantener la proporción
+        display: block; /* Ocupa todo el ancho disponible */
+        width: 100%; /* Ancho del 100% de la tarjeta */
+        height: auto; /* Altura automática para mantener la proporción */
     }
 
     .receta img {
-        width: 100%; // Ancho del 100% del contenedor
-        height: auto; // Altura automática para mantener la proporción
-        object-fit: contain; // Ajusta la imagen al contenedor sin distorsionar
-        border-radius: 8px; // Bordes redondeados
-        max-width: 400px; // Ancho máximo de la imagen
+        width: 100%; /* Ancho del 100% del contenedor */
+        height: auto; /* Altura automática para mantener la proporción */
+        object-fit: contain; /* Ajusta la imagen al contenedor sin distorsionar */
+        border-radius: 8px; /* Bordes redondeados */
+        max-width: 400px; /* Ancho máximo de la imagen */
     }
 
-    // Evitar carga innecesaria de imágenes en Firefox
+    /* Evitar carga innecesaria de imágenes en Firefox */
     @supports (-moz-appearance: none) {
         .receta img {
-            max-width: 100%; // Limita el tamaño según el contenedor
-            width: auto; // Permite que Firefox elija la imagen óptima
+            max-width: 100%; /* Limita el tamaño según el contenedor */
+            width: auto; /* Permite que Firefox elija la imagen óptima */
         }
     }
 
     .receta p {
-        margin-top: 10px; // Espacio entre la imagen y el texto
+        margin-top: 10px; /* Espacio entre la imagen y el texto */
     }
 
-    // Estilos para los botones de receta
+    /* Estilos para los botones de receta */
     .boton-receta {
-        background-color: v.$color-boton; // Color de fondo del botón
-        border: 2px solid v.$color-borde-boton; // Borde del botón
-        font-family: v.$fuente-decorativa; // Fuente de texto decorativa
-        font-weight: 400; // Texto normal
-        padding: 8px 15px; // Relleno interno
-        border-radius: 8px; // Bordes redondeados
-        cursor: pointer; // Cursor de puntero al pasar por encima
-        color: v.$color-texto; // Color de texto
+        background-color: v.$color-boton; /* Color de fondo del botón */
+        border: 2px solid v.$color-borde-boton; /* Borde del botón */
+        font-family: v.$fuente-decorativa; /* Fuente de texto decorativa */
+        font-weight: 400; /* Texto normal */
+        padding: 8px 15px; /* Relleno interno */
+        border-radius: 8px; /* Bordes redondeados */
+        cursor: pointer; /* Cursor de puntero al pasar por encima */
+        color: v.$color-texto; /* Color de texto */
 
-        &:hover { // Estilos al pasar el ratón por encima
-            background-color: v.$color-borde-boton; // Cambia el color de fondo
+        &:hover { /* Estilos al pasar el ratón por encima */
+            background-color: v.$color-borde-boton; /* Cambia el color de fondo */
         }
     }
 }
 
-// Media query para tablets y móviles
+/* Media query para tablets y móviles */
 @media (max-width: 1024px) {
     .menu-categorias {
         display: none; /* Oculta el menú lateral en pantallas pequeñas */

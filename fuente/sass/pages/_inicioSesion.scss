@@ -8,94 +8,107 @@ body {
     padding: 0; // Elimina el relleno predeterminado
 }
 
+/* Estilos para la sección principal de inicio de sesión */
 .inicio-sesion-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    display: flex; /* Usamos flexbox para el diseño */
+    flex-direction: column; /* Alineamos los elementos en columna */
+    align-items: center; /* Centramos horizontalmente los elementos */
+    padding: 20px; /* Añadimos relleno alrededor del contenido */
 
+    /* Estilos para el formulario de inicio de sesión */
     .inicio-sesion-form {
-        border: 1px solid v.$color-borde-form;
-        padding: 20px;
-        font-family: v.$fuente-secundaria;
-        font-weight: 700;
-        width: 100%;
-        max-width: 300px; /* Ajusta según sea necesario */
-        margin-top: 20px;
-        margin-bottom: 20px;
+        border: 1px solid v.$color-borde-form; /* Borde del formulario */
+        padding: 20px; /* Añadimos relleno dentro del formulario */
+        font-family: v.$fuente-secundaria; /* Fuente Montserrat para el formulario */
+        font-weight: 700; /* Negrita para el formulario */
+        width: 100%; /* El formulario ocupa todo el ancho disponible */
+        max-width: 300px; /* Ancho máximo del formulario */
+        margin-top: 20px; /* Añadimos margen superior */
+        margin-bottom: 20px; /* Añadimos margen inferior */
 
+        /* Estilos para el formulario en sí */
         form {
-            display: flex;
-            flex-direction: column;
+            display: flex; /* Usamos flexbox para el diseño del formulario */
+            flex-direction: column; /* Alineamos los elementos del formulario en columna */
 
+            /* Estilos para las etiquetas de los campos del formulario */
             label {
-                margin-bottom: 5px;
+                margin-bottom: 5px; /* Añadimos margen inferior a las etiquetas */
             }
 
+            /* Estilos para los campos de entrada del formulario */
             input {
-                border: 2px solid v.$color-borde-form;
-                padding: 12px;
-                margin-bottom: 10px;
+                border: 2px solid v.$color-borde-form; /* Borde de los campos del formulario */
+                padding: 12px; /* Añadimos relleno dentro de los campos */
+                margin-bottom: 10px; /* Añadimos margen inferior a los campos */
             }
 
+            /* Estilos para el botón de envío del formulario */
             button {
-                background-color: v.$color-boton;
-                border: 2px solid v.$color-borde-boton;
-                font-family: v.$fuente-decorativa;
-                font-weight: 400;
-                width: 200px;
-                padding: 8px 15px;
-                border-radius: 8px;
-                cursor: pointer;
-                color: v.$color-texto;
-                display: block;
-                margin: 10px auto 0;
+                background-color: v.$color-boton; /* Color de fondo del botón */
+                border: 2px solid v.$color-borde-boton; /* Borde del botón */
+                font-family: v.$fuente-decorativa; /* Fuente de texto decorativa */
+                font-weight: 400; /* Texto normal */
+                width: 200px; /* Ancho del botón */
+                padding: 8px 15px; /* Relleno interno del botón */
+                border-radius: 8px; /* Bordes redondeados del botón */
+                cursor: pointer; /* Cursor de puntero al pasar por encima */
+                color: v.$color-texto; /* Color de texto del botón */
+                display: block; /* El botón se muestra como un bloque */
+                margin: 10px auto 0; /* Márgenes del botón (superior, automático, 0) */
 
+                /* Estilos al pasar el ratón por encima del botón */
                 &:hover {
-                    background-color: v.$color-borde-boton;
+                    background-color: v.$color-borde-boton; /* Cambia el color de fondo */
                 }
             }
 
+            /* Estilos para el enlace "¿Olvidaste tu contraseña?" */
             .olvidaste-password {
-                text-align: center;
-                margin-top: 10px;
-                font-family: v.$fuente-secundaria;
-                color: v.$color-texto;
-                font-size: 0.7em;
+                text-align: center; /* Centramos el texto */
+                margin-top: 10px; /* Añadimos margen superior */
+                font-family: v.$fuente-secundaria; /* Fuente Montserrat */
+                color: v.$color-texto; /* Color del texto */
+                font-size: 0.7em; /* Tamaño de la fuente */
             }
         }
     }
 
+    /* Estilos para la sección de suscripción */
     .suscribirse {
-        background-color: v.$color-fondo-suscribete;
-        padding: 10px;
-        font-family: v.$fuente-secundaria;
-        font-weight: 400;
-        width: 100%;
-        max-width: 300px; /* Ajusta según sea necesario */
-        text-align: center;
-        margin-bottom: 40px;
+        background-color: v.$color-fondo-suscribete; /* Color de fondo de la sección */
+        padding: 10px; /* Añadimos relleno dentro de la sección */
+        font-family: v.$fuente-secundaria; /* Fuente Montserrat */
+        font-weight: 400; /* Texto normal */
+        width: 100%; /* La sección ocupa todo el ancho disponible */
+        max-width: 300px; /* Ancho máximo de la sección */
+        text-align: center; /* Centramos el texto */
+        margin-bottom: 40px; /* Añadimos margen inferior */
 
+        /* Estilos para el enlace "Regístrate" */
         .enlace-registrarse {
-            text-align: center;
-            margin-top: 10px;
-            font-family: v.$fuente-secundaria;
-            color: v.$color-texto;
-            font-size: 0.9em;
+            text-align: center; /* Centramos el texto */
+            margin-top: 10px; /* Añadimos margen superior */
+            font-family: v.$fuente-secundaria; /* Fuente Montserrat */
+            color: v.$color-texto; /* Color del texto */
+            font-size: 0.9em; /* Tamaño de la fuente */
         }
     }
 }
 
-
 /* Media query para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
+    /* Estilos para la sección principal de inicio de sesión en pantallas pequeñas */
     .inicio-sesion-main {
+        /* Estilos para el formulario de inicio de sesión en pantallas pequeñas */
         .inicio-sesion-form {
+            /* Estilos para el formulario en sí en pantallas pequeñas */
             form {
+                /* Estilos para el botón de envío del formulario en pantallas pequeñas */
                 button {
                     width: auto; /* El botón se ajusta al contenido en móviles */
-                    min-width: 120px; /* Ancho mínimo para el botón */
-                    padding: 10px 20px; /* Ajusta el padding para que no sea tan grande */
+                    min-width: 120px; /* Ancho mínimo para el botón en móviles */
+                    padding: 10px 20px; /* Ajusta el relleno interno del botón en móviles */
                 }
             }
         }

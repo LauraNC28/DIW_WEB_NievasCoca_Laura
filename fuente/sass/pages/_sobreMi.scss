@@ -8,76 +8,81 @@ body {
     padding: 0; // Elimina el relleno predeterminado
 }
 
+/* Estilos para la sección principal "Sobre mí" */
 .sobre-mi-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    display: flex; /* Usamos flexbox para el diseño */
+    flex-direction: column; /* Alineamos los elementos en columna */
+    align-items: center; /* Centramos horizontalmente los elementos */
+    padding: 20px; /* Relleno interno */
 
+    /* Estilos para el texto principal "Sobre mí" */
     .sobre-mi-texto-principal {
-        background-color: v.$color-fondo-texto-principal;
-        border: 1px solid v.$color-borde-texto-principal;
-        padding: 20px;
-        font-family: v.$fuente-principal;
-        font-size: 1em;
-        text-align: left;
-        width: 100%;
-        max-width: 1200px; /* Ajusta según sea necesario */
-        margin-bottom: 20px;
+        background-color: v.$color-fondo-texto-principal; /* Color de fondo */
+        border: 1px solid v.$color-borde-texto-principal; /* Borde */
+        padding: 20px; /* Relleno interno */
+        font-family: v.$fuente-principal; /* Fuente Open Sans */
+        font-size: 1em; /* Tamaño de la fuente */
+        text-align: left; /* Alineación del texto a la izquierda */
+        width: 100%; /* Ancho del 100% del contenedor */
+        max-width: 1200px; /* Ancho máximo */
+        margin-bottom: 20px; /* Margen inferior */
     }
 
+    /* Estilos para el contenido inferior "Sobre mí" (imagen y texto) */
     .sobre-mi-contenido-inferior {
-        display: flex;
-        width: 100%;
-        max-width: 1200px; /* Ajusta según sea necesario */
+        display: flex; /* Usamos flexbox para el diseño */
+        width: 100%; /* Ancho del 100% del contenedor */
+        max-width: 1200px; /* Ancho máximo */
 
+        /* Estilos para la sección de la imagen "Sobre mí" */
         .sobre-mi-imagen {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            flex: 1; /* Ocupa todo el espacio disponible */
+            display: flex; /* Usamos flexbox para el diseño */
+            justify-content: center; /* Centramos horizontalmente la imagen */
+            align-items: center; /* Centramos verticalmente la imagen */
 
+            /* Estilos para la imagen dentro de la sección "Sobre mí" */
             img {
-                max-width: 100%;
-                height: auto;
+                max-width: 100%; /* Ancho máximo del 100% del contenedor */
+                height: auto; /* Altura automática para mantener la proporción */
             }
 
-            // Evitar carga innecesaria de imágenes en Firefox
+            /* Evitar carga innecesaria de imágenes en Firefox */
             @supports (-moz-appearance: none) {
                 img {
-                    max-width: 100%; // Limita el tamaño según el contenedor
-                    width: auto; // Permite que Firefox elija la imagen óptima
+                    max-width: 100%; /* Limita el tamaño según el contenedor */
+                    width: auto; /* Permite que Firefox elija la imagen óptima */
                 }
             }
         }
 
+        /* Estilos para el texto de la comunidad "Sobre mí" */
         .sobre-mi-texto-comunidad {
-            background-color: v.$color-fondo-texto-comunidad;
-            padding: 20px;
-            font-family: v.$fuente-principal;
-            font-size: 1em;
-            text-align: left;
-            flex: 1;
+            background-color: v.$color-fondo-texto-comunidad; /* Color de fondo */
+            padding: 20px; /* Relleno interno */
+            font-family: v.$fuente-principal; /* Fuente Open Sans */
+            font-size: 1em; /* Tamaño de la fuente */
+            text-align: left; /* Alineación del texto a la izquierda */
+            flex: 1; /* Ocupa todo el espacio disponible */
             margin-left: 20px; /* Espacio entre imagen y texto */
 
-
+            /* Estilos para el botón "Unirse" */
             .unirse {
-                background-color: v.$color-boton; // Color de fondo del botón
-                border: 2px solid v.$color-borde-boton; // Borde del botón
-                font-family: v.$fuente-decorativa; // Fuente de texto decorativa
-                font-weight: 400; // Texto normal
-                padding: 8px 15px; // Relleno interno
-                border-radius: 8px; // Bordes redondeados
-                cursor: pointer; // Cursor de puntero al pasar por encima
-                color: v.$color-texto; // Color de texto
+                background-color: v.$color-boton; /* Color de fondo del botón */
+                border: 2px solid v.$color-borde-boton; /* Borde del botón */
+                font-family: v.$fuente-decorativa; /* Fuente de texto decorativa */
+                font-weight: 400; /* Texto normal */
+                padding: 8px 15px; /* Relleno interno */
+                border-radius: 8px; /* Bordes redondeados */
+                cursor: pointer; /* Cursor de puntero al pasar por encima */
+                color: v.$color-texto; /* Color de texto */
                 display: block; /* Muestra el botón como un bloque */
                 margin: 0 auto; /* Centra el botón horizontalmente */
-            
-                &:hover { // Estilos al pasar el ratón por encima
-                    background-color: v.$color-borde-boton; // Cambia el color de fondo
+
+                &:hover { /* Estilos al pasar el ratón por encima */
+                    background-color: v.$color-borde-boton; /* Cambia el color de fondo */
                 }
             }
-        
         }
     }
 
@@ -97,4 +102,3 @@ body {
         }
     }
 }
-

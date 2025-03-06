@@ -756,67 +756,82 @@ body {
   padding: 0;
 }
 
+/* Estilos para la sección principal de contacto */
 .contacto-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+  display: flex; /* Usamos flexbox para el diseño */
+  flex-direction: column; /* Alineamos los elementos en columna */
+  align-items: center; /* Centramos horizontalmente los elementos */
+  padding: 20px; /* Añadimos relleno alrededor del contenido */
+  /* Estilos para el formulario de contacto */
+  /* Estilos para la sección de información de contacto */
 }
 .contacto-main .contacto-form {
-  border: 1px solid #E0BBB0;
-  padding: 20px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  width: 100%;
-  max-width: 400px;
-  margin-bottom: 20px;
+  border: 1px solid #E0BBB0; /* Borde del formulario */
+  padding: 20px; /* Añadimos relleno dentro del formulario */
+  font-family: "Montserrat", sans-serif; /* Fuente Montserrat para el formulario */
+  font-weight: 700; /* Negrita para el formulario */
+  width: 100%; /* El formulario ocupa todo el ancho disponible */
+  max-width: 400px; /* Ancho máximo del formulario */
+  margin-bottom: 20px; /* Añadimos margen inferior */
+  /* Estilos para el formulario en sí */
 }
 .contacto-main .contacto-form form {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Usamos flexbox para el diseño del formulario */
+  flex-direction: column; /* Alineamos los elementos del formulario en columna */
+  /* Estilos para las etiquetas de los campos del formulario */
+  /* Estilos para los campos de entrada y el área de texto del formulario */
+  /* Estilos para el botón de envío del formulario */
 }
 .contacto-main .contacto-form form label {
-  margin-bottom: 5px;
+  margin-bottom: 5px; /* Añadimos margen inferior a las etiquetas */
 }
 .contacto-main .contacto-form form input, .contacto-main .contacto-form form textarea {
-  border: 2px solid #E0BBB0;
-  padding: 10px;
-  margin-bottom: 10px;
+  border: 2px solid #E0BBB0; /* Borde de los campos del formulario */
+  padding: 10px; /* Añadimos relleno dentro de los campos */
+  margin-bottom: 10px; /* Añadimos margen inferior a los campos */
 }
 .contacto-main .contacto-form form button {
-  background-color: #FFD3C2;
-  border: 2px solid #FFC2A1;
-  font-family: "Pacifico", cursive;
-  font-weight: 400;
-  padding: 15px 30px;
-  border-radius: 8px;
-  margin: 20px auto 0;
-  width: 300px;
-  cursor: pointer;
-  color: #333333;
+  background-color: #FFD3C2; /* Color de fondo del botón */
+  border: 2px solid #FFC2A1; /* Borde del botón */
+  font-family: "Pacifico", cursive; /* Fuente de texto decorativa */
+  font-weight: 400; /* Texto normal */
+  padding: 15px 30px; /* Relleno interno del botón */
+  border-radius: 8px; /* Bordes redondeados del botón */
+  margin: 20px auto 0; /* Márgenes del botón */
+  width: 300px; /* Ancho del botón */
+  cursor: pointer; /* Cursor de puntero al pasar por encima */
+  color: #333333; /* Color de texto del botón */
+  /* Estilos al pasar el ratón por encima del botón */
 }
 .contacto-main .contacto-form form button:hover {
-  background-color: #FFC2A1;
+  background-color: #FFC2A1; /* Cambia el color de fondo */
 }
 .contacto-main .contacto-info {
-  background-color: #FFE8E8;
-  padding: 20px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  width: 100%;
-  max-width: 400px;
-  display: flex; /* Agregamos flexbox */
+  background-color: #FFE8E8; /* Fondo de la sección de información */
+  padding: 20px; /* Añadimos relleno dentro de la sección */
+  font-family: "Open Sans", sans-serif; /* Fuente Open Sans para la información de contacto */
+  font-weight: 400; /* Regular para la información de contacto */
+  width: 100%; /* La sección ocupa todo el ancho disponible */
+  max-width: 400px; /* Ancho máximo de la sección */
+  display: flex; /* Usamos flexbox para el diseño */
   flex-direction: column; /* Alineamos los elementos en columna */
   align-items: center; /* Centramos horizontalmente los elementos */
   margin-top: 30px; /* Añade margen superior */
   margin-bottom: 30px; /* Añade margen inferior */
+  /* Estilos para los artículos dentro de la sección de información */
+  /* Estilos para el mensaje "Sígueme" */
+  /* Estilos para la sección de redes sociales */
+  /* Estilos para la palabra "Redes:" */
+  /* Estilos para el contenedor de iconos de redes sociales */
+  /* Estilos para los enlaces de iconos de redes sociales */
+  /* Estilos para los iconos de redes sociales */
 }
 .contacto-main .contacto-info article {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Añadimos margen inferior a los artículos */
 }
 .contacto-main .contacto-info .contacto-sigueme {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-family: "Montserrat", sans-serif; /* Fuente Montserrat para "Sígueme" */
+  font-weight: 600; /* Semibold para "Sígueme" */
 }
 .contacto-main .contacto-info .contacto-redes {
   display: flex; /* Usamos flexbox para alinear los elementos */
@@ -832,11 +847,11 @@ body {
   align-items: center; /* Centramos horizontalmente los iconos */
 }
 .contacto-main .contacto-info .social-icons a {
-  margin: 0 7px;
+  margin: 0 7px; /* Añadimos margen a los iconos */
 }
 .contacto-main .contacto-info .social-icons i {
-  font-size: 1.5em;
-  color: #333333;
+  font-size: 1.5em; /* Tamaño de los iconos */
+  color: #333333; /* Color de los iconos */
   align-self: center; /* Alinea verticalmente los iconos */
 }
 
@@ -941,57 +956,74 @@ body {
   padding: 0;
 }
 
+/* Estilos para la sección principal de crear cuenta */
 .crear-cuenta-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+  display: flex; /* Usamos flexbox para el diseño */
+  flex-direction: column; /* Alineamos los elementos en columna */
+  align-items: center; /* Centramos horizontalmente los elementos */
+  padding: 20px; /* Añadimos relleno alrededor del contenido */
+  /* Estilos para el formulario de crear cuenta */
 }
 .crear-cuenta-main .crear-cuenta-form {
-  border: 1px solid #E0BBB0;
-  padding: 20px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  width: 100%;
-  max-width: 300px; /* Ajusta según sea necesario */
-  margin-top: 20px;
-  margin-bottom: 20px;
+  border: 1px solid #E0BBB0; /* Borde del formulario */
+  padding: 20px; /* Añadimos relleno dentro del formulario */
+  font-family: "Montserrat", sans-serif; /* Fuente Montserrat para el formulario */
+  font-weight: 700; /* Negrita para el formulario */
+  width: 100%; /* El formulario ocupa todo el ancho disponible */
+  max-width: 300px; /* Ancho máximo del formulario */
+  margin-top: 20px; /* Añadimos margen superior */
+  margin-bottom: 20px; /* Añadimos margen inferior */
+  /* Estilos para el formulario en sí */
 }
 .crear-cuenta-main .crear-cuenta-form form {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Usamos flexbox para el diseño del formulario */
+  flex-direction: column; /* Alineamos los elementos del formulario en columna */
+  /* Estilos para las etiquetas de los campos del formulario */
+  /* Estilos para los campos de entrada del formulario */
+  /* Estilos para el botón de envío del formulario */
 }
 .crear-cuenta-main .crear-cuenta-form form label {
-  margin-bottom: 5px;
+  margin-bottom: 5px; /* Añadimos margen inferior a las etiquetas */
 }
 .crear-cuenta-main .crear-cuenta-form form input {
-  border: 2px solid #E0BBB0;
-  padding: 10px;
-  margin-bottom: 10px;
+  border: 2px solid #E0BBB0; /* Borde de los campos del formulario */
+  padding: 10px; /* Añadimos relleno dentro de los campos */
+  margin-bottom: 10px; /* Añadimos margen inferior a los campos */
 }
 .crear-cuenta-main .crear-cuenta-form form button {
-  background-color: #FFD3C2;
-  border: 2px solid #FFC2A1;
-  font-family: "Pacifico", cursive;
-  font-weight: 400;
-  width: 200px;
-  padding: 8px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  color: #333333;
-  display: block;
-  margin: 10px auto 0; /* Margen superior ajustado */
+  background-color: #FFD3C2; /* Color de fondo del botón */
+  border: 2px solid #FFC2A1; /* Borde del botón */
+  font-family: "Pacifico", cursive; /* Fuente de texto decorativa */
+  font-weight: 400; /* Texto normal */
+  width: 200px; /* Ancho del botón */
+  padding: 8px 15px; /* Relleno interno del botón */
+  border-radius: 8px; /* Bordes redondeados del botón */
+  cursor: pointer; /* Cursor de puntero al pasar por encima */
+  color: #333333; /* Color de texto del botón */
+  display: block; /* El botón se muestra como un bloque */
+  margin: 10px auto 0; /* Márgenes del botón (superior, automático, 0) */
+  /* Estilos al pasar el ratón por encima del botón */
 }
 .crear-cuenta-main .crear-cuenta-form form button:hover {
-  background-color: #FFC2A1;
+  background-color: #FFC2A1; /* Cambia el color de fondo */
 }
 
 /* Media query para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
+  /* Estilos para la sección principal de crear cuenta en pantallas pequeñas */
+  .crear-cuenta-main {
+    /* Estilos para el formulario de crear cuenta en pantallas pequeñas */
+  }
+  .crear-cuenta-main .crear-cuenta-form {
+    /* Estilos para el formulario en sí en pantallas pequeñas */
+  }
+  .crear-cuenta-main .crear-cuenta-form form {
+    /* Estilos para el botón de envío del formulario en pantallas pequeñas */
+  }
   .crear-cuenta-main .crear-cuenta-form form button {
-    width: auto;
-    min-width: 120px;
-    padding: 10px 20px;
+    width: auto; /* El botón se ajusta al contenido en móviles */
+    min-width: 120px; /* Ancho mínimo para el botón en móviles */
+    padding: 10px 20px; /* Ajusta el relleno interno del botón en móviles */
   }
 }
 
