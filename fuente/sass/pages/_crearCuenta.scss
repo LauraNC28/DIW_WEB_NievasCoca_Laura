@@ -68,19 +68,10 @@ body {
 
 /* Media query para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
-    /* Estilos para la sección principal de crear cuenta en pantallas pequeñas */
-    .crear-cuenta-main {
-        /* Estilos para el formulario de crear cuenta en pantallas pequeñas */
-        .crear-cuenta-form {
-            /* Estilos para el formulario en sí en pantallas pequeñas */
-            form {
-                /* Estilos para el botón de envío del formulario en pantallas pequeñas */
-                button {
-                    width: auto; /* El botón se ajusta al contenido en móviles */
-                    min-width: 120px; /* Ancho mínimo para el botón en móviles */
-                    padding: 10px 20px; /* Ajusta el relleno interno del botón en móviles */
-                }
-            }
-        }
+    /* Estilos para el botón de envío del formulario en pantallas pequeñas */
+    button {
+        width: auto; /* El botón se ajusta al contenido en móviles */
+        min-width: 120px; /* Ancho mínimo para el botón en móviles */
+        padding: 10px 20px; /* Ajusta el relleno interno del botón en móviles */
     }
 }

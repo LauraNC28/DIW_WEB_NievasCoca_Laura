@@ -16,10 +16,9 @@ body { // Estilos para el cuerpo de la página
     gap: 2rem; // Espacio entre las secciones (variable)
     
     .hero { // Estilos para la sección del "hero" (imagen principal)
-        display: flex; // Usa flexbox para el diseño
         justify-content: center; // Centra horizontalmente el contenido
         align-items: center; // Centra verticalmente el contenido
-        width: 100%; // Ocupa todo el ancho disponible
+        width: 100vw; // Ocupa todo el ancho disponible
 
         
         picture {
@@ -45,7 +44,6 @@ body { // Estilos para el cuerpo de la página
     }
 
     .comentarios { // Estilos para la sección de "comentarios"
-        display: flex; // Usa flexbox para el diseño
         flex-direction: column; // Los elementos se organizan en columna
         gap: 1rem; // Espacio entre los comentarios (variable)
         max-width: 600px; // Ancho máximo del contenedor
