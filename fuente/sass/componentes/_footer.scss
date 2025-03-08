@@ -3,6 +3,7 @@
 .footer {
     background-color: v.$color-footer; // Establece el color de fondo del footer usando una variable
     width: 100%; // Asegura que el footer ocupe todo el ancho de la página
+    position: absolute;
     padding-top: 10px; // Agrega margen superior
     font-family: v.$fuente-secundaria; // Establece la fuente del texto usando una variable
     font-weight: 600; // Establece el grosor de la fuente
